@@ -76,7 +76,7 @@ To run that command over all files in our input, we can use the ``find`` program
 
    find . -name '*.js' | \
      xargs -n 1 -I {} bash -c 'whitespace "$@"' _ {} | \
-     jq -s '{results: .}' > \
+     jq -s '{results: .}' | \
      tee /analysis/output/output.json
 
 There's a lot going on there, so we'll take it line by line.
