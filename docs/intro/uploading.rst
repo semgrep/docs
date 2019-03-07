@@ -12,8 +12,6 @@ we'll just sanity-check the fields in ``analyzer.json``:
 
    {
        "analyzer_name": "YOUR-ORGANIZATION-HERE/minifinder",
-       "author_name": "Alyssa P. Hacker",
-       "author_email": "analysis@example.com",
        "version": "0.0.1",
        "spec_version": "1.0.0",
        "dependencies": {
