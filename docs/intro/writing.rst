@@ -55,7 +55,7 @@ To run that command over all files in our input, we can use the ``find`` program
    #!/bin/bash
 
    set -e
-   CODE_DIR="/analysis/inputs/source-code"
+   CODE_DIR="/analysis/inputs/public/source-code"
 
    whitespace () {
        num_ws=$(gawk -v RS='[[:space:]]' 'END{print NR}' "$1")

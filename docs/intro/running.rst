@@ -93,9 +93,14 @@ Now let's add the percentage computation to our whitespace function:
          } \n\
        }"
    }
-                
-And run again::
+                                
+And run again:
+
+.. code-block:: bash
+
   $ r2c run --code ~/test-repos/left-pad/
+
+
 
 .. code-block:: json
    
