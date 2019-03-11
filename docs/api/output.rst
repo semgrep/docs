@@ -38,11 +38,11 @@ Each result object supports the following fields:
 +==========+=========+====================================================================+==========+
 | check_id | string  | The snake_case identifier for the check (e.g "whitespace")         |     Y    |
 +----------+---------+--------------------------------------------------------------------+----------+
-| path     | string  | The slash delineated path and filename where the result is located |     N    |
+| path     | string  | The slash delineated path and filename of the result               |     N    |
 +----------+---------+--------------------------------------------------------------------+----------+
-| start    | point   | The line and column the finding starts on. See point_ for details  |     N    |
+| start    | point   | The starting line and column of the result. See point_ for details |     N    |
 +----------+---------+--------------------------------------------------------------------+----------+
-| end      | point   | The line and column the finding ends on. See point_ for details    |     N    |
+| end      | point   | The ending line and column of the result. See point_ for details   |     N    |
 +----------+---------+--------------------------------------------------------------------+----------+
 | extra    | {}      | A freeform catch-all object for extra data                         |     N    |
 +----------+---------+--------------------------------------------------------------------+----------+
