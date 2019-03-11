@@ -24,9 +24,9 @@ copyright = '2019, Return to Corporation'
 author = 'Return to Corporation'
 
 # The short X.Y version
-version = '0.0.6'
+version = '0.0.10'
 # The full version, including alpha/beta/rc tags
-release = '0.0.6a1'
+release = '0.0.10'
 
 # -- General configuration ---------------------------------------------------
 
