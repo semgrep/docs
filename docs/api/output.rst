@@ -22,7 +22,7 @@ A sample results response from our whitepace finding analyzer in :ref:`running` 
             "results":[
                 {
                     "check_id":"whitespace",
-                    "path":"./perf/O(n).js",
+                    "path":"perf/O(n).js",
                     "extra":{
                         "whitespace":77,
                         "total":241
@@ -36,15 +36,15 @@ Each result object supports the following fields:
 +----------+---------+--------------------------------------------------------------------+----------+
 | Field    | Type    | Description                                                        | Required |
 +==========+=========+====================================================================+==========+
-| check_id | string  | The snake_case identifier for the check (e.g "whitespace")         |     Y    |
+| check_id | string  | The identifier for the check (e.g "whitespace")                    |     Y    |
 +----------+---------+--------------------------------------------------------------------+----------+
-| path     | string  | The slash delineated path and filename of the result               |     N    |
+| path     | string  | The forward-slash delineated path and filename of the result       |     N    |
 +----------+---------+--------------------------------------------------------------------+----------+
 | start    | point   | The starting line and column of the result. See point_ for details |     N    |
 +----------+---------+--------------------------------------------------------------------+----------+
 | end      | point   | The ending line and column of the result. See point_ for details   |     N    |
 +----------+---------+--------------------------------------------------------------------+----------+
-| extra    | {}      | A freeform catch-all object for extra data                         |     N    |
+| extra    | {}      | A JSON object which is a free-form catchall for extra data         |     N    |
 +----------+---------+--------------------------------------------------------------------+----------+
 
 Each point object supports the following fields:
@@ -54,7 +54,7 @@ Each point object supports the following fields:
 +-------+---------+-----------------------------------+----------+
 | Field | Type    | Description                       | Required |
 +=======+=========+===================================+==========+
-| line  | integer | The line number of the result     |     Y    |
+| line  | integer | The line number of the result     |     N    |
 +-------+---------+-----------------------------------+----------+
 | col   | integer | The column position of the result |     N    |
 +-------+---------+-----------------------------------+----------+
@@ -73,7 +73,7 @@ A sample error response looks like:
                 {
                     "message": "Cyclomatic complexity limit reached.",
                     "data": {
-                        "path": "./foobar.js"
+                        "path": "foobar.js"
                     }
                 }
             ]
