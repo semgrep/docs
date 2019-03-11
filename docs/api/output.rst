@@ -1,27 +1,55 @@
 ``output.json``
 ===============
 
-The current version of the ``output.json`` specification is ``1.0.0``. This version supports the following fields in the top-level JSON object:
+The JSON results produced by your analysis must conform to the ``output.json`` specification. As of ``1.0.0``, there are two top-level fields: ``results`` (required) and ``errors`` (optional):
 
-**results**: *[result]*
-    Required field with an array of 0 or more result objects.
+.. code-block:: json
 
-**errors**: *[error]*
-    Optional field with an array of 0 or more error objects.
+    {
+        "results": [],
+        "errors": []
+    }
 
-field, type, description, required
+results
+-----------------
+The ``results`` key is a required top-level field containing an array of 0 or more ``result`` objects that specify the type of result and its location (if applicable).
 
-+-------+------+-------------+----------+
-| field | type | description | required |
-+=======+======+=============+==========+
-| hello | test | test        | final    |
-+-------+------+-------------+----------+
+A sample results field and entry from our whitepace finding analyzer in :ref:`running` is:
 
-sample output
+    .. code-block:: json
 
-For analyzer's with json output.
-results, what are they? when would you use or output this?
+        {
+            "results":[
+                {
+                    "check_id":"whitespace",
+                    "path":"./perf/O(n).js",
+                    "extra":{
+                        "whitespace":77,
+                        "total":241
+                    }
+                }
+            ]
+        }
 
+Each result object supports the following fields:
+
++----------+-------------+--------------------------------------------------------------------+----------+
+| Field    | Type        | Description                                                        | Required |
++----------+-------------+--------------------------------------------------------------------+----------+
+| check_id | ``string``  | The snake_case identifier for the check (e.g "whitespace")         |     Y    |
++----------+-------------+--------------------------------------------------------------------+----------+
+| path     | ``string``  | The slash delineated path and filename where the result is located |     N    |
++----------+-------------+--------------------------------------------------------------------+----------+
+| start    | ``point{}`` | The line and column the finding starts on. See point_ for details  |     N    |
++----------+-------------+--------------------------------------------------------------------+----------+
+| end      | ``point{}`` | The line and column the finding ends on. See point_ for details    |     N    |
++----------+-------------+--------------------------------------------------------------------+----------+
+| extra    | ``{}``      | A freeform catch-call object for extra data                        |     N    |
++----------+-------------+--------------------------------------------------------------------+----------+
+
+errors: [error]
+---------------
+Optional field containing an array of 0 or more ``error`` objects with error messages and related data.
 
 how to display? table with different sections? json blob with comments?
 
@@ -52,3 +80,4 @@ errors (optional)
         ],
         "errors": []
     }
+    [
