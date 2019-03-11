@@ -33,31 +33,55 @@ A sample results response from our whitepace finding analyzer in :ref:`running` 
 
 Each result object supports the following fields:
 
-+----------+---------+--------------------------------------------------------------------+----------+
-| Field    | Type    | Description                                                        | Required |
-+==========+=========+====================================================================+==========+
-| check_id | string  | The identifier for the check (e.g "whitespace")                    |     Y    |
-+----------+---------+--------------------------------------------------------------------+----------+
-| path     | string  | The forward-slash delineated path and filename of the result       |     N    |
-+----------+---------+--------------------------------------------------------------------+----------+
-| start    | point   | The starting line and column of the result. See point_ for details |     N    |
-+----------+---------+--------------------------------------------------------------------+----------+
-| end      | point   | The ending line and column of the result. See point_ for details   |     N    |
-+----------+---------+--------------------------------------------------------------------+----------+
-| extra    | {}      | A JSON object which is a free-form catchall for extra data         |     N    |
-+----------+---------+--------------------------------------------------------------------+----------+
+.. list-table::
+    :header-rows: 1
+    :widths: auto
+
+    * - Field
+      - Type
+      - Description
+      - Required
+    * - check_id
+      - string
+      - The identifier for the check (e.g "whitespace")   
+      - Y
+    * - path
+      - string
+      - The forward-slash delineated path and filename of the result  
+      - N 
+    * - start
+      - point
+      - The starting line and column of the result. See point_ for details
+      - N
+    * - end
+      - point
+      - The ending line and column of the result. See point_ for details
+      - N
+    * - extra
+      - {} 
+      - A JSON object which is a free-form catchall for extra data  
+      - N
 
 Each point object supports the following fields:
 
 .. _point:
 
-+-------+---------+-----------------------------------+----------+
-| Field | Type    | Description                       | Required |
-+=======+=========+===================================+==========+
-| line  | integer | The line number of the result     |     N    |
-+-------+---------+-----------------------------------+----------+
-| col   | integer | The column position of the result |     N    |
-+-------+---------+-----------------------------------+----------+
+.. list-table::
+    :header-rows: 1
+    :widths: auto
+
+    * - Field
+      - Type
+      - Description
+      - Required
+    * - line
+      - integer
+      - The line number of the result
+      - Y
+    * - col
+      - integer
+      - The column position of the result
+      - N
 
 errors
 ---------------
@@ -81,10 +105,19 @@ A sample error response looks like:
 
 Each error object supports the following fields:
 
-+---------+--------+--------------------------------------------+----------+
-| Field   | Type   | Description                                | Required |
-+=========+========+============================================+==========+
-| message | string | A string describing the error              |     Y    |
-+---------+--------+--------------------------------------------+----------+
-| data    | {}     | A freeform catch-all object for error data |     N    |
-+---------+--------+--------------------------------------------+----------+
+.. list-table::
+    :header-rows: 1
+    :widths: auto
+
+    * - Field
+      - Type
+      - Description
+      - Required
+    * - message
+      - string
+      - A string describing the error
+      - Y
+    * - data
+      - {}
+      - A freeform catch-all object for error data
+      - N
