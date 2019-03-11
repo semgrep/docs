@@ -14,7 +14,7 @@ results
 -----------------
 The ``results`` key is a required top-level field containing an array of 0 or more ``result`` objects that specify the type of result and its location (if applicable).
 
-A sample results response from our whitepace finding analyzer in :ref:`running` is:
+A sample ``results`` response from our whitepace finding analyzer in :ref:`running` is:
 
     .. code-block:: json
 
@@ -31,7 +31,7 @@ A sample results response from our whitepace finding analyzer in :ref:`running` 
             ]
         }
 
-Each result object supports the following fields:
+Each ``result`` object supports the following fields:
 
 .. list-table::
     :header-rows: 1
@@ -62,7 +62,7 @@ Each result object supports the following fields:
       - A JSON object which is a free-form catchall for extra data  
       - N
 
-Each point object supports the following fields:
+Each ``point`` object supports the following fields:
 
 .. _point:
 
@@ -87,7 +87,7 @@ errors
 ---------------
 Optional field containing an array of 0 or more ``error`` objects with error messages and related data.
 
-A sample error response looks like:
+A sample ``errors`` response looks like:
 
     .. code-block:: json
 
@@ -103,7 +103,7 @@ A sample error response looks like:
             ]
         }
 
-Each error object supports the following fields:
+Each ``error`` object supports the following fields:
 
 .. list-table::
     :header-rows: 1
