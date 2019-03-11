@@ -21,13 +21,13 @@ Before we can use these tools, we'll need to install them in our Docker containe
    :emphasize-lines: 3
 
    FROM ubuntu:17.10
-                
+
    RUN apt update && apt install -y jq gawk
 
    RUN groupadd -r analysis && useradd --no-log-init --system --gid analysis analysis
 
 When we run our code later, the container will automatically be rebuilt.
-   
+
 .. note:: Analyzers can be written in any programming language, compiled as part of the Docker
           container build process, and executed by ``analyze.sh``. Only trivial analyzers should be
           written in languages like ``bash``! For more information, see
@@ -43,7 +43,7 @@ file. We can do this with GNU ``awk`` and the following command [#f1]_::
 
 We'll want to run that command on all Javascript files in our input. Because we depend on the
 ``source-code`` component for our input, the input will be located in
-``/analysis/inputs/source-code/``. For more information on specifying dependencies and locating
+``/analysis/inputs/public/source-code/``. For more information on specifying dependencies and locating
 their data, see :doc:`/api/index`.
 
 To run that command over all files in our input, we can use the ``find`` program. Let's add it into our analyze.sh so that the file looks like this:
