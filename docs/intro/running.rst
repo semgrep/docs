@@ -65,35 +65,20 @@ We get the following output:
 
 This is helpful! We don't see any minified files, but it'd be nice to understand what *percentage* of the file is whitespace. Let's add a percentage field; we can compute this using the program ``bc``. First, we'll add the program to our Dockerfile:
 
-.. code-block:: Dockerfile
-   :emphasize-lines: 3
-
-   FROM ubuntu:17.10
-                
-   RUN apt update && apt install -y jq gawk bc
-
-   RUN groupadd -r analysis && useradd --no-log-init --system --gid analysis analysis
+.. literalinclude:: samples/minifinder/Dockerfile
+    :linenos:
+    :language: dockerfile
+    :emphasize-lines: 3
+    :lines: 1-5
 
 Now let's add the percentage computation to our whitespace function:
 
-.. code-block:: bash
-   :emphasize-lines: 4,10,11
-                     
-   whitespace () {
-       num_ws=$(gawk -v RS='[[:space:]]' 'END{print NR}' "$1")
-       total=$(wc -c $1 | cut -d ' ' -f 1)
-       path=$(echo "{$1}" |  cut -c 2-)
-       pct=$(echo "scale = 4; $num_ws / $total * 100" | bc)
-       echo -e "{ \n\
-       \"check_id\": \"whitespace\", \n\
-       \"path\": \"${path}\", \n\
-       \"extra\": { \n\
-         \"whitespace\": ${num_ws}, \n\
-         \"total\": ${total}, \n\
-         \"percentage\": ${pct} \n\
-         } \n\
-       }"
-   }
+.. literalinclude:: samples/minifinder/src/analyze.sh
+    :linenos:
+    :language: bash
+    :emphasize-lines: 3,9,10
+    :lines: 6-20
+    
                                 
 And run again:
 

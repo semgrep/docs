@@ -17,14 +17,12 @@ output as ``r2c``-compliant JSON.
 
 Before we can use these tools, we'll need to install them in our Docker container. Our default base image already includes most of the programs we need, but we'll need to install gawk and jq. To do this, add the following line to the project's Dockerfile:
 
-.. code-block:: dockerfile
-   :emphasize-lines: 3
 
-   FROM ubuntu:17.10
-                
-   RUN apt update && apt install -y jq gawk
-
-   RUN groupadd -r analysis && useradd --no-log-init --system --gid analysis analysis
+.. literalinclude:: samples/minifinder/Dockerfile
+    :linenos:
+    :language: dockerfile
+    :emphasize-lines: 3
+    :lines: 1-5
 
 When we run our code later, the container will automatically be rebuilt.
    
@@ -48,36 +46,9 @@ their data, see :doc:`/api/index`.
 
 To run that command over all files in our input, we can use the ``find`` program. Let's add it into our analyze.sh so that the file looks like this:
 
-.. code-block:: bash
-   :linenos:
-   :emphasize-lines: 6-17,19,21,23-26
-
-   #!/bin/bash
-
-   set -e
-   CODE_DIR="/analysis/inputs/public/source-code"
-
-   whitespace () {
-       num_ws=$(gawk -v RS='[[:space:]]' 'END{print NR}' "$1")
-       total=$(wc -c $1 | cut -d ' ' -f 1)
-       echo -e "{ \n\
-       \"check_id\": \"whitespace\", \n\
-       \"path\": \"$1\", \n\
-       \"extra\": { \n\
-         \"whitespace\": ${num_ws}, \n\
-         \"total\": ${total} \n\
-         } \n\
-       }"
-   }
-
-   export -f whitespace
-
-   cd ${CODE_DIR}
-
-   find . -name '*.js' | \
-     xargs -n 1 -I {} bash -c 'whitespace "$@"' _ {} | \
-     jq -s '{results: .}' | \
-     tee /analysis/output/output.json
+.. literalinclude:: samples/minifinder/src/analyze.sh
+    :linenos:
+    :language: bash
 
 There's a lot going on there, so we'll take it line by line.
 
