@@ -47,10 +47,8 @@ This created several files in the ``minifinder`` folder.
 Important files
 ---------------
 
-The ``Dockerfile`` sets up everything our container needs to run. For more complicated analyses, you
-can install programs you need to build or run your analysis here. You can also change the base
-image; if you want to write analysis in JavaScript, for example, you may find it helpful to choose
-the base image as ``node:11.10.1``.
+The ``Dockerfile`` is responsible for all of our container's setup and configuration. For some analyses you
+may need to edit it, installing your dependencies to build and run your analysis. To learn more about Dockerfiles in general, see `Docker's tutorial <https://docs.docker.com/get-started/part2/#define-a-container-with-dockerfile>`_.
 
 .. note:: Though it can be tempting to use images like ``node:latest``, most analyzers should be
           deterministic and therefore benefit from pinning their base image to a specific
