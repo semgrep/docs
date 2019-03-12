@@ -15,7 +15,7 @@ we'll just sanity-check the fields in ``analyzer.json``:
        "version": "0.0.1",
        "spec_version": "1.0.0",
        "dependencies": {
-           "source-code": "*"
+           "public/source-code": "*"
        },
        "type": "commit",
        "output": "json",
