@@ -2,7 +2,7 @@ Writing the analysis
 ====================
 
 For this tutorial, we're going to write an analysis that reports how much of each file in a project
-is whitespace. We'll use it to find which projects have checked in minified Javascript files, so
+is whitespace. We'll use it to find which projects have checked in minified JavaScript files, so
 we've called it minifinder. At this point we have our ``minifinder`` folder containing
 ``analyzer.json``, a ``Dockerfile``, and the ``src`` directory containing ``analyze.sh``.
 
@@ -38,12 +38,11 @@ file. We can do this with GNU ``awk`` and the following command [#f1]_::
 
   gawk -v RS='[[:space:]]' 'END{print NR}' <some-file>
 
-We'll want to run that command on all Javascript files in our input. Because we depend on the
-``source-code`` component for our input, the input will be located in
-``/analysis/inputs/public/source-code/``. For more information on specifying dependencies and locating
-their data, see :doc:`/api/index`.
+When we run our analyzer we want this command to run over all JavaScript input files, which will be located (i.e. mounted) at
+``/analysis/inputs/public/source-code/``. This location is a result of minifinder depending on the ``source-code`` component (configured in ``analyzer.json``). For more information about dependencies and locating
+their output, see :doc:`/api/index`.
 
-To run that command over all files in our input, we can use the ``find`` program. Let's add it into our analyze.sh so that the file looks like this:
+To get just JavaScript files, we'll use the ``find`` program on our mounted source-code directory. Add the following to your ``analyze.sh``:
 
 .. literalinclude:: samples/minifinder/src/analyze.sh
     :linenos:
@@ -60,9 +59,9 @@ the fields are optional, and will help us later to match results to code locatio
 tools and to run our computations.
 
 In line 19, we make this function available to other bash shells; this is needed for the arcane
-``xargs`` instance to follow. Most analyses either discover Javascript files on their own, or can
+``xargs`` instance to follow. Most analyzers either discover JavaScript files on their own, or can
 run with command line arguments outside of bash, so this line won't be needed for most other
-analyses.
+analyzers.
 
 In line 21, we change the working directory to the folder of our input. This is to make the paths we
 output relative to the input source; it's easier than using absolute paths and removing the input
