@@ -23,5 +23,5 @@ cd ${CODE_DIR}
 
 find . -name '*.js' | \
   xargs -n 1 -I {} bash -c 'whitespace "$@"' _ {} | \
-  jq -s '{results: .}' | \
-  tee /analysis/output/output.json
+  jq -s '{results: .}' > \
+  /analysis/output/output.json
