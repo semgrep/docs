@@ -2,7 +2,7 @@ Writing the analysis
 ====================
 
 For this tutorial, we're going to write an analysis that reports how much of each file in a project
-is whitespace. We'll use it to find which projects have checked in minified Javascript files, so
+is whitespace. We'll use it to find which projects have checked in minified JavaScript files, so
 we've called it minifinder. At this point we have our ``minifinder`` folder containing
 ``analyzer.json``, a ``Dockerfile``, and the ``src`` directory containing ``analyze.sh``.
 
@@ -59,7 +59,7 @@ the fields are optional, and will help us later to match results to code locatio
 tools and to run our computations.
 
 In line 19, we make this function available to other bash shells; this is needed for the arcane
-``xargs`` instance to follow. Most analyses either discover Javascript files on their own, or can
+``xargs`` instance to follow. Most analyses either discover JavaScript files on their own, or can
 run with command line arguments outside of bash, so this line won't be needed for most other
 analyses.
 

@@ -5,7 +5,7 @@ Running and testing
 
 .. highlight:: text
 
-Let's test our analyzer! First we'll need a target javascript project to test it on. Let's use the popular ``left-pad`` project. Let's make a folder to keep our test projects in and clone that project to the folder::
+Let's test our analyzer! First we'll need a target JavaScript project to test it on. Let's use the popular ``left-pad`` project. Let's make a folder to keep our test projects in and clone that project to the folder::
 
   $ mkdir ~/test-repos
   $ git clone https://github.com/stevemao/left-pad ~/test-repos/left-pad

@@ -39,7 +39,7 @@ following fields in the top-level JSON object:
    * A ``constant`` analyzer always produces the same output. This can be useful for the trained
      data for a machine learning based analysis, by having the analyzer depend on its trained
      weights separately from the actual analysis.
-   * A ``commit`` analyzer produces output for a Javascript project at a specific point in its
+   * A ``commit`` analyzer produces output for a JavaScript project at a specific point in its
      history, a single instance of code. This analyzer should not expect to make use of any version
      control features. Most analyzers are ``commit`` anlayzers.
    * A ``git`` analyzer understands the evolution and history of a repository. It produces unique

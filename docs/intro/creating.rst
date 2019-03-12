@@ -49,7 +49,7 @@ Important files
 
 The ``Dockerfile`` sets up everything our container needs to run. For more complicated analyses, you
 can install programs you need to build or run your analysis here. You can also change the base
-image; if you want to write analysis in Javascript, for example, you may find it helpful to choose
+image; if you want to write analysis in JavaScript, for example, you may find it helpful to choose
 the base image as ``node:11.10.1``.
 
 .. note:: Though it can be tempting to use images like ``node:latest``, most analyzers should be
