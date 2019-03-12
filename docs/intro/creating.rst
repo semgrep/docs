@@ -47,8 +47,8 @@ This created several files in the ``minifinder`` folder.
 Important files
 ---------------
 
-The ``Dockerfile`` is responsible for all of our container's setup and configuration. For some analyses you
-may need to edit it, installing your dependencies to build and run your analysis. To learn more about Dockerfiles in general, see `Docker's tutorial <https://docs.docker.com/get-started/part2/#define-a-container-with-dockerfile>`_.
+The ``Dockerfile`` is responsible for all of our container's setup and configuration. For some analyzers you
+may need to edit it, installing dependencies to build and run your analysis. To learn more about Dockerfiles in general, see `Docker's tutorial <https://docs.docker.com/get-started/part2/#define-a-container-with-dockerfile>`_.
 
 .. note:: Though it can be tempting to use images like ``node:latest``, most analyzers should be
           deterministic and therefore benefit from pinning their base image to a specific
@@ -74,7 +74,7 @@ will interact with the ``r2c`` system and tools. Some important values in this f
   This is the main way our analysis can interact with other analysis components. This analyzer
   depends on the most basic component, ``source-code``. It specifies that it depends on any version
   of the ``source-code`` component by specifying ``"*"`` as the version. For more complicated
-  analyses, we could depend on components such as ``r2c/transpiler`` with different options, or
+  analysis, we could depend on components such as ``r2c/transpiler`` with different options, or
   ``r2c/typeflow``, but those are beyond the scope of this tutorial.
 
 For now, all these default values are good enough to get us started. We will spend most of our time

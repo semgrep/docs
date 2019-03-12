@@ -59,9 +59,9 @@ the fields are optional, and will help us later to match results to code locatio
 tools and to run our computations.
 
 In line 19, we make this function available to other bash shells; this is needed for the arcane
-``xargs`` instance to follow. Most analyses either discover JavaScript files on their own, or can
+``xargs`` instance to follow. Most analyzers either discover JavaScript files on their own, or can
 run with command line arguments outside of bash, so this line won't be needed for most other
-analyses.
+analyzers.
 
 In line 21, we change the working directory to the folder of our input. This is to make the paths we
 output relative to the input source; it's easier than using absolute paths and removing the input
