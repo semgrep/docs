@@ -9,6 +9,7 @@ Let's test our analyzer! First we'll need a target javascript project to test it
 
   $ mkdir ~/test-repos
   $ git clone https://github.com/stevemao/left-pad ~/test-repos/left-pad
+  $ git checkout v1.3.0
 
 Now we can run our analyzer::
 

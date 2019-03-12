@@ -6,7 +6,7 @@ CODE_DIR="/analysis/inputs/public/source-code"
 whitespace () {
     num_ws=$(gawk -v RS='[[:space:]]' 'END{print NR}' "$1")
     total=$(wc -c $1 | cut -d ' ' -f 1)
-    path=$(echo "{$1}" |  cut -c 2-)
+    path=$(echo $1 | cut -c 3-)
     pct=$(echo "scale = 4; $num_ws / $total * 100" | bc)
     echo -e "{ \n\
     \"check_id\": \"whitespace\", \n\
