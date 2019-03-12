@@ -17,7 +17,6 @@ output as ``r2c``-compliant JSON.
 
 Before we can use these tools, we'll need to install them in our Docker container. Our default base image already includes most of the programs we need, but we'll need to install gawk and jq. To do this, add the following line to the project's Dockerfile:
 
-
 .. literalinclude:: samples/minifinder/Dockerfile
     :linenos:
     :language: dockerfile
@@ -25,7 +24,7 @@ Before we can use these tools, we'll need to install them in our Docker containe
     :lines: 1-5
 
 When we run our code later, the container will automatically be rebuilt.
-   
+
 .. note:: Analyzers can be written in any programming language, compiled as part of the Docker
           container build process, and executed by ``analyze.sh``. Only trivial analyzers should be
           written in languages like ``bash``! For more information, see
@@ -41,7 +40,7 @@ file. We can do this with GNU ``awk`` and the following command [#f1]_::
 
 We'll want to run that command on all Javascript files in our input. Because we depend on the
 ``source-code`` component for our input, the input will be located in
-``/analysis/inputs/source-code/``. For more information on specifying dependencies and locating
+``/analysis/inputs/public/source-code/``. For more information on specifying dependencies and locating
 their data, see :doc:`/api/index`.
 
 To run that command over all files in our input, we can use the ``find`` program. Let's add it into our analyze.sh so that the file looks like this:
