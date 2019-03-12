@@ -1,6 +1,6 @@
 {
-    "analyzer_name": "dev/minifinder",
-    "version": "0.0.1",
+    "analyzer_name": "YOUR-ORGANIZATION-HERE/minifinder",
+    "version": "0.0.2",
     "spec_version": "1.0.0",
     "dependencies": {
         "public/source-code": "*"
