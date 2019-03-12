@@ -8,19 +8,9 @@ go. For larger analyzers, this would be the time to also run all of our unit tes
 tests with ``r2c`` :doc:`/cli/unittest` and ``r2c`` :doc:`/cli/test`. For this tutorial analyzer,
 we'll just sanity-check the fields in ``analyzer.json``:
 
-.. code-block:: json
-
-   {
-       "analyzer_name": "YOUR-ORGANIZATION-HERE/minifinder",
-       "version": "0.0.1",
-       "spec_version": "1.0.0",
-       "dependencies": {
-           "public/source-code": "*"
-       },
-       "type": "commit",
-       "output": "json",
-       "deterministic": true
-   }            
+.. literalinclude:: samples/minifinder/analyzer.json
+    :linenos:
+    :language: json
    
 Everything looks mostly good. However, to follow best practices, our analyzer should use `Semantic
 Versioning`_. As this is our first release, but we're not yet sure if everything is production
