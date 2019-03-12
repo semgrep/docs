@@ -1,3 +1,5 @@
+.. _running:
+
 Running and testing
 ===================
 
@@ -20,7 +22,7 @@ We get the following output:
      "results": [
        {
          "check_id": "whitespace",
-         "path": "./perf/O(n).js",
+         "path": "perf/O(n).js",
          "extra": {
            "whitespace": 77,
            "total": 241
@@ -28,7 +30,7 @@ We get the following output:
        },
        {
          "check_id": "whitespace",
-         "path": "./perf/perf.js",
+         "path": "perf/perf.js",
          "extra": {
            "whitespace": 213,
            "total": 1442
@@ -36,7 +38,7 @@ We get the following output:
        },
        {
          "check_id": "whitespace",
-         "path": "./perf/es6Repeat.js",
+         "path": "perf/es6Repeat.js",
          "extra": {
            "whitespace": 61,
            "total": 216
@@ -44,7 +46,7 @@ We get the following output:
        },
        {
          "check_id": "whitespace",
-         "path": "./test.js",
+         "path": "test.js",
          "extra": {
            "whitespace": 714,
            "total": 4005
@@ -52,7 +54,7 @@ We get the following output:
        },
        {
          "check_id": "whitespace",
-         "path": "./index.js",
+         "path": "index.js",
          "extra": {
            "whitespace": 436,
            "total": 1469
@@ -80,10 +82,11 @@ Now let's add the percentage computation to our whitespace function:
    whitespace () {
        num_ws=$(gawk -v RS='[[:space:]]' 'END{print NR}' "$1")
        total=$(wc -c $1 | cut -d ' ' -f 1)
+       path=$(echo "{$1}" |  cut -c 2-)
        pct=$(echo "scale = 4; $num_ws / $total * 100" | bc)
        echo -e "{ \n\
        \"check_id\": \"whitespace\", \n\
-       \"path\": \"$1\", \n\
+       \"path\": \"${path}\", \n\
        \"extra\": { \n\
          \"whitespace\": ${num_ws}, \n\
          \"total\": ${total}, \n\
@@ -91,9 +94,14 @@ Now let's add the percentage computation to our whitespace function:
          } \n\
        }"
    }
-                
-And run again::
+                                
+And run again:
+
+.. code-block:: bash
+
   $ r2c run --code ~/test-repos/left-pad/
+
+
 
 .. code-block:: json
    
@@ -101,7 +109,7 @@ And run again::
      "results": [
        {
          "check_id": "whitespace",
-         "path": "./perf/O(n).js",
+         "path": "perf/O(n).js",
          "extra": {
            "whitespace": 77,
            "total": 241,
@@ -110,7 +118,7 @@ And run again::
        },
        {
          "check_id": "whitespace",
-         "path": "./perf/perf.js",
+         "path": "perf/perf.js",
          "extra": {
            "whitespace": 213,
            "total": 1442,
@@ -119,7 +127,7 @@ And run again::
        },
        {
          "check_id": "whitespace",
-         "path": "./perf/es6Repeat.js",
+         "path": "perf/es6Repeat.js",
          "extra": {
            "whitespace": 61,
            "total": 216,
@@ -128,7 +136,7 @@ And run again::
        },
        {
          "check_id": "whitespace",
-         "path": "./test.js",
+         "path": "test.js",
          "extra": {
            "whitespace": 714,
            "total": 4005,
@@ -137,7 +145,7 @@ And run again::
        },
        {
          "check_id": "whitespace",
-         "path": "./index.js",
+         "path": "index.js",
          "extra": {
            "whitespace": 436,
            "total": 1469,
