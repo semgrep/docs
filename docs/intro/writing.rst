@@ -38,12 +38,11 @@ file. We can do this with GNU ``awk`` and the following command [#f1]_::
 
   gawk -v RS='[[:space:]]' 'END{print NR}' <some-file>
 
-We'll want to run that command on all Javascript files in our input. Because we depend on the
-``source-code`` component for our input, the input will be located in
-``/analysis/inputs/public/source-code/``. For more information on specifying dependencies and locating
-their data, see :doc:`/api/index`.
+When we run our analyzer we want this command to run over all JavaScript input files, which will be located (i.e. mounted) at
+``/analysis/inputs/public/source-code/``. This location is a result of minifinder depending on the ``source-code`` component (see your ``analyzer.json`` file). For more information about dependencies and locating
+their output, see :doc:`/api/index`.
 
-To run that command over all files in our input, we can use the ``find`` program. Let's add it into our analyze.sh so that the file looks like this:
+To get just JavaScript fils, we'll use the ``find`` program on our mounted source-code directory. Add the following to your ``analyze.sh``:
 
 .. literalinclude:: samples/minifinder/src/analyze.sh
     :linenos:
