@@ -24,7 +24,7 @@ We get the following output:
 
 This is helpful! We don't see any minified files, but it'd be nice to understand what *percentage* of the file is whitespace. Let's add a percentage field; we can compute this using the program ``bc``. First, we'll add the program to our Dockerfile:
 
-.. literalinclude:: samples/minifinder/Dockerfile
+.. literalinclude:: samples/minifinder2/Dockerfile
     :linenos:
     :language: dockerfile
     :emphasize-lines: 3
