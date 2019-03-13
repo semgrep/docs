@@ -13,7 +13,7 @@ Let's test our analyzer! First we'll need a target JavaScript project to test it
 
 Now we can run our analyzer::
 
-  $ r2c run --code ~/test-repos/left-pad
+  $ r2c run ~/test-repos/left-pad
 
 We get the following output:
 
@@ -43,7 +43,7 @@ And run again:
 
 .. code-block:: bash
 
-  $ r2c run --code ~/test-repos/left-pad/
+  $ r2c run ~/test-repos/left-pad/
 
 .. literalinclude:: samples/minifinder2/examples/leftpad.json
     :linenos:
