@@ -21,7 +21,6 @@ Before we can use these tools, we'll need to install them in our Docker containe
     :linenos:
     :language: dockerfile
     :emphasize-lines: 3
-    :lines: 1-5
 
 When we run our code later, the container will automatically be rebuilt.
 
@@ -42,11 +41,12 @@ When we run our analyzer we want this command to run over all JavaScript input f
 ``/analysis/inputs/public/source-code/``. This location is a result of minifinder depending on the ``source-code`` component (configured in ``analyzer.json``). For more information about dependencies and locating
 their output, see :doc:`/api/index`.
 
-To get just JavaScript files, we'll use the ``find`` program on our mounted source-code directory. Add the following to your ``analyze.sh``:
+To get just JavaScript files, we'll use the ``find`` program on our mounted source-code directory. Add the following to ``src/analyze.sh``:
 
 .. literalinclude:: samples/minifinder/src/analyze.sh
     :linenos:
     :language: bash
+    :emphasize-lines: 6-27
 
 There's a lot going on there, so we'll take it line by line.
 

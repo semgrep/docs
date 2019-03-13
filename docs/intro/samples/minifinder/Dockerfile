@@ -2,9 +2,14 @@ FROM ubuntu:17.10
 
 RUN apt update && apt install -y jq gawk
 
-RUN groupadd -r analysis && useradd --no-log-init --system --gid analysis analysis
-USER analysis
+ARG UNAME
+ARG UID
+ARG GID
 
-COPY --chown=analysis:analysis src /analyzer
+RUN groupadd -o $UNAME -g $GID
+RUN useradd -m -u $UID -g $GID -o $UNAME
+USER $UNAME
+COPY src /analyzer
+
 WORKDIR /
 CMD ["/analyzer/analyze.sh"]

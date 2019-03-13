@@ -13,13 +13,8 @@ already added your Github account to the group, then logging in is as simple as 
 
   $ r2c login
 
-and following the instructions. If you are the first user in the organization to log in, you will
-need to pass the argument::
-
-  $ r2c login --org <your-group-name-here>
-
-If you don't have a group name, :email:`contact us<mailto:collaborate@returntocorp.com>`! We're
-happy to support new projects on the ``r2c`` platform.
+and following the instructions. If you don't have a group name, :email:`contact us<mailto:collaborate@returntocorp.com>`! 
+We're happy to support new projects on the ``r2c`` platform.
 
 Initialize your project
 -----------------------

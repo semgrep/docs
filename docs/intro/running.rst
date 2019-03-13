@@ -13,7 +13,7 @@ Let's test our analyzer! First we'll need a target JavaScript project to test it
 
 Now we can run our analyzer::
 
-  $ r2c run --code ~/test-repos/left-pad
+  $ r2c run ~/test-repos/left-pad
 
 We get the following output:
 
@@ -24,26 +24,24 @@ We get the following output:
 
 This is helpful! We don't see any minified files, but it'd be nice to understand what *percentage* of the file is whitespace. Let's add a percentage field; we can compute this using the program ``bc``. First, we'll add the program to our Dockerfile:
 
-.. literalinclude:: samples/minifinder/Dockerfile
+.. literalinclude:: samples/minifinder2/Dockerfile
     :linenos:
     :language: dockerfile
     :emphasize-lines: 3
-    :lines: 1-5
 
 Now let's add the percentage computation to our whitespace function:
 
-.. literalinclude:: samples/minifinder/src/analyze.sh
+.. literalinclude:: samples/minifinder2/src/analyze.sh
     :linenos:
     :language: bash
-    :emphasize-lines: 3,9,10
-    :lines: 6-20
+    :emphasize-lines: 10,16,17
     
                                 
 And run again:
 
 .. code-block:: bash
 
-  $ r2c run --code ~/test-repos/left-pad/
+  $ r2c run ~/test-repos/left-pad/
 
 .. literalinclude:: samples/minifinder2/examples/leftpad.json
     :linenos:
