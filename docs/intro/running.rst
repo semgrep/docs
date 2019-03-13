@@ -31,11 +31,10 @@ This is helpful! We don't see any minified files, but it'd be nice to understand
 
 Now let's add the percentage computation to our whitespace function:
 
-.. literalinclude:: samples/minifinder/src/analyze.sh
+.. literalinclude:: samples/minifinder2/src/analyze.sh
     :linenos:
     :language: bash
-    :emphasize-lines: 3,9,10
-    :lines: 6-20
+    :emphasize-lines: 10,16,17
     
                                 
 And run again:
