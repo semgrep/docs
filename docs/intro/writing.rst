@@ -21,7 +21,6 @@ Before we can use these tools, we'll need to install them in our Docker containe
     :linenos:
     :language: dockerfile
     :emphasize-lines: 3
-    :lines: 1-5
 
 When we run our code later, the container will automatically be rebuilt.
 

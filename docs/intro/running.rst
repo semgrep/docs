@@ -28,7 +28,6 @@ This is helpful! We don't see any minified files, but it'd be nice to understand
     :linenos:
     :language: dockerfile
     :emphasize-lines: 3
-    :lines: 1-5
 
 Now let's add the percentage computation to our whitespace function:
 
