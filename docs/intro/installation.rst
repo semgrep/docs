@@ -32,13 +32,13 @@ Checking that python and pip work:::
 Get the R2C CLI
 ---------------
 
-It's easy! Just run:
+It's easy! Just run:::
 
   $ pip3 install r2c-cli
 
 If you already have ``r2c`` installed and want to upgrade, run ``pip3 install -U r2c-cli``. ``r2c`` is still in beta, so check back here and upgrade early and often - we're making it better every day.
 
-To verify that your installation of ``r2c`` works, run:
+To verify that your installation of ``r2c`` works, run:::
 
   $ r2c --help
 

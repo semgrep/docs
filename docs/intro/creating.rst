@@ -24,7 +24,7 @@ happy to support new projects on the ``r2c`` platform.
 Initialize your project
 -----------------------
 
-Make sure you are in a directory where you want to create analyzers. Then run:
+Make sure you are in a directory where you want to create analyzers. Then run::
 
   $ r2c init
 
