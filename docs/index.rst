@@ -17,7 +17,6 @@ we recommend starting with the :doc:`intro/index`.
       
    intro/index
    api/index
-   cli/index
    best-practices
    troubleshooting
 
