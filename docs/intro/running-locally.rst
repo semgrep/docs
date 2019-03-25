@@ -1,7 +1,7 @@
 .. _running:
 
-Running Locally
-===============
+Run Locally
+===========
 
 .. highlight:: text
 
