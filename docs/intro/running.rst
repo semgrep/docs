@@ -1,17 +1,20 @@
 .. _running:
 
-Running and testing
-===================
+Running & Testing Locally
+=========================
 
 .. highlight:: text
 
-Let's test our analyzer! First we'll need a target JavaScript project to test it on. Let's use the popular ``left-pad`` project. Let's make a folder to keep our test projects in and clone that project to the folder::
+Let's test our analyzer! First we'll need a target JavaScript project to test it on. Let's use the popular ``left-pad`` project. Let's make a folder to keep our test projects in and clone that project to the folder:
+
+.. code-block:: console
 
   $ mkdir ~/test-repos
   $ git clone https://github.com/stevemao/left-pad ~/test-repos/left-pad
-  $ git checkout v1.3.0
 
-Now we can run our analyzer::
+Now we can run our analyzer:
+
+.. code-block:: console
 
   $ r2c run ~/test-repos/left-pad
 
@@ -39,7 +42,7 @@ Now let's add the percentage computation to our whitespace function:
                                 
 And run again:
 
-.. code-block:: bash
+.. code-block:: console
 
   $ r2c run ~/test-repos/left-pad/
 
