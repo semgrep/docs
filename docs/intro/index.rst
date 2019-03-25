@@ -8,5 +8,6 @@ This section is a brief tutorial for getting started with ``r2c``. For detailed 
    installation
    creating
    writing
-   running
-   uploading
+   running-locally
+   running-scale
+   jupyter
