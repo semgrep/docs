@@ -1,5 +1,5 @@
-Writing the analysis
-====================
+Writing Program Analysis
+========================
 
 For this tutorial, we're going to write an analysis that reports how much of each file in a project
 is whitespace. We'll use it to find which projects have checked in minified JavaScript files, so
