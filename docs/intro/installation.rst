@@ -29,8 +29,8 @@ Checking that python and pip work:::
   $ python3 --version
   $ pip3 --version
    
-Get the R2C CLI
----------------
+Getting the r2c CLI
+-------------------
 
 It's easy! Just run:::
 
