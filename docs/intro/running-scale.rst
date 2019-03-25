@@ -1,6 +1,9 @@
 Run on r2c
 ==========
 
+Push to r2c
+-----------
+
 Uploading our analyzer is simple. In :doc:`creating`, we logged in to the r2c system, so we already
 have our credentials to push analyzers to r2c. Once published, though, analyzer versions can't be
 unpublished, so we should take a quick look at our analyzer to make sure everything is ready to
