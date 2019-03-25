@@ -1,8 +1,8 @@
-Creating the Analyzer
+Creating an Analyzer
 =====================
 
-Log In
-------
+Logging in to r2c
+-----------------
 
 .. highlight:: text
 
@@ -19,16 +19,16 @@ and following the instructions. If you don't have a group name, :email:`contact
 us<mailto:collaborate@returntocorp.com>`!  We're happy to support new projects on the ``r2c``
 platform.
 
-Creating the Basic Structure
-----------------------------
+Initializing Boilerplate
+------------------------
 
-Make sure you are in a directory where you want to create analyzers. Then run:
+In a directory where you want to create your new analyzer, run:
 
 .. code-block:: console
 
   $ r2c init
 
-For the ``Analyzer name`` prompt, enter **minifinder**. For the rest of the prompts, you can accept
+For the ``Analyzer name`` prompt, enter **minifinder**. For the rest of the prompts we'll use
 the defaults by pressing enter.
 
 .. code-block:: console
@@ -47,8 +47,8 @@ Check it out by changing to the new folder:
 
    $ cd minifinder/
 
-Important Files
----------------
+Understanding Analyzer Files
+----------------------------
 
 The ``init`` command created several files in the ``minifinder`` folder:
 
@@ -94,6 +94,6 @@ Each of these files is used by the ``r2c`` system in a different way.
 * ``src/unittest.sh`` lets us run our analyzer's unit tests, if it has them, inside the container by
   caling them from this file.
 
-For now, all the default values are good enough to get us started.
+For now default values will get us started.
 
 Let's move on to :doc:`writing`.
