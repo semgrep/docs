@@ -5,7 +5,7 @@ RUN apt update && apt install -y jq gawk bc
 RUN groupadd -r analysis && useradd -m --no-log-init --gid analysis analysis
 
 USER analysis
-COPY src /analyzerr
+COPY src /analyzer
 
 WORKDIR /
 CMD ["/analyzer/analyze.sh"]
