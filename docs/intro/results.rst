@@ -1,14 +1,16 @@
 Analyzing Results
 =================
 
-.. note:: The following instructions are for analyzers with output type ``json``. See TODO to learn more.
+.. note:: The following instructions are for analyzers with output type ``json``. See :doc:`../api/manifest` to learn more about this and other output types.
 
-When you run an analyzer on the r2c platform we store the results in a group or team specific SQL database. There are a few ways we prefer to interact with results that all ultimately rely on a SQL client of some kind. The most common tools we've used and seen are:
+When you run an analyzer on the r2c platform we store the results in a group or team specific SQL database. There are a few ways we prefer to interact with results that all ultimately rely on a SQL client. The most common tools we've used and seen are:
 
 1. `psql <https://www.postgresql.org/docs/9.3/app-psql.html>`_, for raw querying
-2. `Jupyter Notebook <https://jupyter.org/>`_ with Python sqlalchemy, for more in-depth analysis.
+2. `Jupyter Notebook <https://jupyter.org/>`_ with Python `sqlalchemy <https://www.sqlalchemy.org/>`_, for more in-depth analysis.
 
-We'll use both in this tutorial to explore the available tables, data, and to find minified files. For your own projects, we encourage you to use what you're familiar with for working with SQL.
+We'll use both in this tutorial to explore the available tables, data, and to find minified files.
+
+For your own projects, we encourage you to use what you're familiar with for working with SQL.
 
 Using ``psql``
 --------------
