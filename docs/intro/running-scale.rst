@@ -8,8 +8,7 @@ Uploading our analyzer is simple. In :doc:`creating`, we logged in to the r2c sy
 have our credentials to push analyzers to r2c. Once published, though, analyzer versions can't be
 unpublished, so we should take a quick look at our analyzer to make sure everything is ready to
 go. For larger analyzers, this would be the time to also run all of our unit tests and integration
-tests with ``r2c`` :doc:`/cli/unittest` and ``r2c`` :doc:`/cli/test`. For this tutorial analyzer,
-we'll just sanity-check the fields in ``analyzer.json``:
+test. For this tutorial analyzer, we'll just sanity-check the fields in ``analyzer.json``:
 
 .. literalinclude:: samples/minifinder/analyzer.json
     :linenos:
