@@ -10,4 +10,4 @@ This section is a brief tutorial for getting started with ``r2c``. For detailed 
    writing
    running-locally
    running-scale
-   jupyter
+   results
