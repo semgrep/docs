@@ -20,11 +20,15 @@ Follow those links to get both of those set up on your operating system and come
 
 .. highlight:: text
 
-Checking that docker works:::
+Checking that docker works:
+
+.. code-block:: console
 
   $ docker run hello-world
 
-Checking that python and pip work:::
+Checking that python and pip work:
+
+.. code-block:: console
 
   $ python3 --version
   $ pip3 --version
@@ -32,18 +36,19 @@ Checking that python and pip work:::
 Getting the r2c CLI
 -------------------
 
-It's easy! Just run:::
+It's easy! Just run:
+
+.. code-block:: console
 
   $ pip3 install r2c-cli
 
 If you already have ``r2c`` installed and want to upgrade, run ``pip3 install -U r2c-cli``. ``r2c`` is still in beta, so check back here and upgrade early and often - we're making it better every day.
 
-To verify that your installation of ``r2c`` works, run:::
+To verify that your installation of ``r2c`` works, run:
+
+.. code-block:: console
 
   $ r2c --help
-
-You should see:::
-  
   Usage: r2c [OPTIONS] COMMAND [ARGS]...
 
   Options:
@@ -60,5 +65,5 @@ You should see:::
     test      Locally run integration tests for the current analyzer...
     unittest  Locally unit tests for the current analyzer directory You can...
 
-If everything looks good, you're ready to move on to :doc:`creating`.  
+If the help prompt successfully prints, you're ready to move on to :doc:`creating`.
 

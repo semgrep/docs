@@ -17,7 +17,9 @@ we'll just sanity-check the fields in ``analyzer.json``:
    
 Everything looks mostly good. However, to follow best practices, our analyzer should use `Semantic
 Versioning`_. As this is our first release, but we're not yet sure if everything is production
-ready, we should designate this release version ``0.1.0``::
+ready, we should designate this release version ``0.1.0``:
+
+.. code-block:: json
 
   "version": "0.1.0",
 
@@ -26,7 +28,9 @@ ready, we should designate this release version ``0.1.0``::
 .. highlight:: text
 
 Great! Now we're all set. We can push our analyzer to r2c by running the following command from
-within the analyzer directory::
+within the analyzer directory:
+
+.. code-block:: console
 
   $ r2c push
 
