@@ -54,7 +54,7 @@ First, we declare this as a function that can produce one r2c JSON result object
 7, we use GNU awk to find the number of whitespace characters. In line 8, we use wc to find the
 total number of characters in the file; this will be helpful later for determining *how much* of the
 file is whitespace. Then, we use echo to log the result as a single instance of an r2c JSON
-result. The ``check_id`` field is necessary; it tells R2C what this result indicates. The rest of
+result. The ``check_id`` field is necessary; it tells r2c what this result indicates. The rest of
 the fields are optional, and will help us later to match results to code locations in other r2c
 tools and to run our computations.
 
