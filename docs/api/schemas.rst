@@ -5,7 +5,7 @@ Database Schemas
 
     We recommend `psql <https://www.postgresql.org/docs/9.3/app-psql.html>`_ for raw querying and exploration of data or the Python library `sqlalchemy <https://www.sqlalchemy.org/>`_ for data analysis in environments like `Jupyter Notebook <https://jupyter.org/>`_. See :doc:`../intro/results` for more details and connection strings.
 
-Analyzers with output type ``json`` (discussed in :doc:`manifest`) are stored in group specific SQL databases. There are two primary tables: 
+Analyzers with output type ``json`` (discussed in :doc:`manifest`) are stored in group specific PostgreSQL databases. There are two primary tables: 
 
 1. ``result``
 2. ``commit_corpus``
