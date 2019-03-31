@@ -7,7 +7,7 @@ WHITESPACE_RE = re.compile("\s")
 
 def count_whitespace(path):
     print("Counting whitespace in file {}".format(path))
-    with open(path, "r") as file:
+    with open(path, "r", encoding="utf-8") as file:
         data = file.read()
     result = {}
     result["check_id"] = "whitespace"
