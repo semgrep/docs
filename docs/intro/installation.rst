@@ -20,45 +20,53 @@ Follow those links to get both of those set up on your operating system and come
 
 .. highlight:: text
 
-Checking that docker works:::
+Checking that docker works:
+
+.. code-block:: console
 
   $ docker run hello-world
 
-Checking that python and pip work:::
+Checking that python and pip work:
+
+.. code-block:: console
 
   $ python3 --version
   $ pip3 --version
    
-Get the R2C CLI
----------------
+Getting the r2c CLI
+-------------------
 
-It's easy! Just run:::
+It's easy! Just run:
+
+.. code-block:: console
 
   $ pip3 install r2c-cli
 
-If you already have ``r2c`` installed and want to upgrade, run ``pip3 install -U r2c-cli``. ``r2c`` is still in beta, so check back here and upgrade early and often - we're making it better every day.
+.. note:: If you already have ``r2c`` installed and want to upgrade, run ``pip3 install -U r2c-cli``. ``r2c`` is still in beta, so check back here and upgrade early and often - we're making it better every day.
 
-To verify that your installation of ``r2c`` works, run:::
+To verify that your installation of ``r2c`` works, run:
+
+.. code-block:: console
 
   $ r2c --help
-
-You should see:::
-  
   Usage: r2c [OPTIONS] COMMAND [ARGS]...
-
+  
   Options:
-    --debug    Show extra output, error messages, and exception stack traces
-    --version  Show current version of r2c cli.
-    --help     Show this message and exit.
-
+    --debug                 Show extra output, error messages, and exception
+                            stack traces
+    --version               Show current version of r2c cli.
+    --no-traverse-manifest  Don't attempt to find an analyzer.json if it doesn't
+                            exist in the current or specified directory
+    --help                  Show this message and exit.
+  
   Commands:
+    build     Builds an analyzer without running it.
     init      Creates an example analyzer for analyzing JavaScript/TypeScript.
-    login     Log into the R2C analysis platform.
+    login     Log in to the R2C analysis platform.
     logout    Log out of the R2C analysis platform.
-    push      Push the analyzer in the current directory to the R2C analysis...
+    push      Push the analyzer in the current directory to the R2C platform.
     run       Run the analyzer in the current directory over a code directory.
-    test      Locally run integration tests for the current analyzer...
-    unittest  Locally unit tests for the current analyzer directory You can...
-
-If everything looks good, you're ready to move on to :doc:`creating`.  
-
+    test      Locally run integration tests for the current analyzer.
+    unittest  Locally unit tests for the current analyzer directory.
+  
+If the help prompt successfully prints, you're ready to move on to :doc:`creating`.

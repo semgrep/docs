@@ -1,0 +1,44 @@
+{
+    "results": [
+        {
+            "check_id": "whitespace",
+            "extra": {
+                "num_whitespace": 638,
+                "size": 3673
+            },
+            "path": "./test.js"
+        },
+        {
+            "check_id": "whitespace",
+            "extra": {
+                "num_whitespace": 61,
+                "size": 216
+            },
+            "path": "./perf/es6Repeat.js"
+        },
+        {
+            "check_id": "whitespace",
+            "extra": {
+                "num_whitespace": 213,
+                "size": 1442
+            },
+            "path": "./perf/perf.js"
+        },
+        {
+            "check_id": "whitespace",
+            "extra": {
+                "num_whitespace": 77,
+                "size": 241
+            },
+            "path": "./perf/O(n).js"
+        },
+        {
+            "check_id": "whitespace",
+            "extra": {
+                "num_whitespace": 360,
+                "size": 1137
+            },
+            "path": "./index.js"
+        }
+    ]
+}

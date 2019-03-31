@@ -20,13 +20,13 @@
 # -- Project information -----------------------------------------------------
 
 project = 'r2c'
-copyright = '2019, Return to Corporation'
-author = 'Return to Corporation'
+copyright = '2019, r2c'
+author = 'r2c'
 
 # The short X.Y version
-version = '0.0.12'
+version = '0.0.15'
 # The full version, including alpha/beta/rc tags
-release = '0.0.12'
+release = '0.0.15'
 
 # -- General configuration ---------------------------------------------------
 
@@ -135,7 +135,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'r2c.tex', 'r2c Documentation',
-     'Return to Corporation', 'manual'),
+     'r2c', 'manual'),
 ]
 
 

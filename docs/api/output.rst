@@ -1,5 +1,5 @@
-``output.json``
-===============
+JSON Results
+============
 
 The JSON results produced by your analysis must conform to the ``output.json`` specification. As of ``1.0.0``, there are two top-level fields: ``results`` (required) and ``errors`` (optional):
 
