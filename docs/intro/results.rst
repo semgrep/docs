@@ -60,7 +60,7 @@ Now that we've selected all results (``select *``), we'll limit the search with 
   select result.commit_hash from result, commit_corpus where corpus_name = $CORPUS and analyzer_name = $ANALZYER and analyzer_version = $ANALYZER_VERSION and commit_corpus.commit_hash = result.commit_hash group by result.commit_hash
 
 Using Jupyter Notebook with Python
----------------------------------
+----------------------------------
 
 TODO
 * more comprehensive data analysis and data science work. Recommend using docker here and running Jupyter locally.

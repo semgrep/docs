@@ -35,11 +35,45 @@ within the analyzer directory:
 
   $ r2c push
 
-That's it! Head on over to :samp:`https://[YOUR-GROUP].massive.ret2.co/` to run your analyzer on the
-top 1000 npm projects and dive right into the results. These documents will be updated soon to cover
-that part of the r2c workflow as well; for now, don't hesitate to :email:`reach
-us<mailto:collaborate@returntocorp.com>` by email with any questions! Once you've successfully run
-your analysis on 1000 projects and looked at the result, send us an email for access to larger and
-more powerful data sets, including the entire history of hundreds of thousands of packages on npm.
-               
+That's it! Now let's head on over to :samp:`https://[YOUR-GROUP].massive.ret2.co/` to run your analyzer on the
+top 1000 npm projects and dive right into the results.
+
+Starting the Job
+----------------
+
+Once you've logged in with Github, your group's Jobs page might look something like this:
+
+.. image:: images/r2c.png
+   :alt: The r2c Jobs page
+
+Click the "Create Job" button, which will pull up a menu letting you select the analyzer you've just
+pushed!
+
+.. image:: images/analyzer.png
+   :alt: Selecting the analyzer to run
+
+After that, we'll pick a data set to run our analyzer across. Let's use the top 1000 NPM packages as
+of the start of 2019 for this tutorial.
+
+.. image:: images/npm1k.png
+   :alt: Choosing the data set for our run.
+
+Click "Run Job" to start the analysis!
+      
+Viewing Results
+---------------
+
+The job we started in the previous section may take a little while to run. The first time you run
+any job, it may take a while for the Docker image to reach all the machines running your
+analysis. Once that happens, it should proceed quickly and you should be able to get results within
+just a few minutes for your code. You can click on the job in the job list to see the output,
+console logs, and errors coming in in real time.
+
+Once the job has finished, click the "View results in notebook" button to be taken to your Jupyter
+notebook where you can query the results. Currently, this documentation doesn't cover that part of
+the r2c system. We're adding more documentation soon, bu for now, don't hesitate to :email:`reach
+us<mailto:collaborate@returntocorp.com>` by email with any questions!  Once you've successfully
+explored your analysis across 1000 projects, send us an email for access to larger and more powerful
+data sets, including the entire history of hundreds of thousands of packages on npm.
+
 Happy hacking!
