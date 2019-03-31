@@ -1,4 +1,4 @@
-$ r2c run /tmp/left-pad/
+$ r2c run ~/test-repos/left-pad/
 🏃 Running analyzer...
 Counting whitespace in file ./test.js
 Counting whitespace in file ./perf/es6Repeat.js
