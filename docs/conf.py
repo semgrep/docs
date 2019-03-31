@@ -24,9 +24,9 @@ copyright = '2019, r2c'
 author = 'r2c'
 
 # The short X.Y version
-version = '0.0.12'
+version = '0.0.15'
 # The full version, including alpha/beta/rc tags
-release = '0.0.12'
+release = '0.0.15'
 
 # -- General configuration ---------------------------------------------------
 

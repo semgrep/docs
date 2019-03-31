@@ -19,7 +19,7 @@ and following the instructions. If you don't have a group name, :email:`contact
 us<mailto:collaborate@returntocorp.com>`!  We're happy to support new projects on the ``r2c``
 platform.
 
-Initializing Boilerplate
+Creating the Boilerplate
 ------------------------
 
 In a directory where you want to create your new analyzer, run:
@@ -37,9 +37,14 @@ the defaults by pressing enter.
   Analyzer name [example]: minifinder
   Author name [Jav A. Script]:
   Author email [hello@example.com]:
-  Run on (constant, commit, git) [commit]:
-  Output type (filesystem, json, both) [json]:
-  ✅ done. Your analyzer can be found in the minifinder directory
+  Will your analyzer produce:
+  - output for a particular `git` repository
+  - output for a particular git `commit` in a repo
+  - the same `constant` output regardless of commit or repo? (git, commit, constant) [commit]:
+  Does your analyzer output
+  - a single schema-compliant JSON file
+  - a full filesystem output? (json, filesystem) [json]:
+  ✅ Done! Your analyzer can be found in the minifinder directory
 
 Check it out by changing to the new folder:
 
@@ -94,6 +99,4 @@ Each of these files is used by the ``r2c`` system in a different way.
 * ``src/unittest.sh`` lets us run our analyzer's unit tests, if it has them, inside the container by
   caling them from this file.
 
-For now default values will get us started.
-
-Let's move on to :doc:`writing`.
+Once you've checked out those files, let's move on to :doc:`writing`.

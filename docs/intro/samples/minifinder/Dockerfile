@@ -1,6 +1,6 @@
 FROM ubuntu:17.10
 
-RUN apt update && apt install -y jq gawk
+RUN apt update && apt install -y python3
 
 ARG UNAME
 ARG UID

@@ -4,7 +4,9 @@ Running on r2c
 Pushing to r2c
 --------------
 
-Uploading our analyzer is simple. In :doc:`creating`, we logged in to the r2c system, so we already
+Before we can run analysis at scale, we need to upload the analyzer to ``r2c``.
+
+Uploading an analyzer is simple. In :doc:`creating`, we logged in to the r2c system, so we already
 have our credentials to push analyzers to r2c. Once published, though, analyzer versions can't be
 unpublished, so we should take a quick look at our analyzer to make sure everything is ready to
 go. For larger analyzers, this would be the time to also run all of our unit tests and integration
@@ -33,7 +35,7 @@ within the analyzer directory:
 
   $ r2c push
 
-That's it! Head on over to :samp:`https://{your-org}.massive.ret2.co/` to run your analyzer on the
+That's it! Head on over to :samp:`https://[YOUR-GROUP].massive.ret2.co/` to run your analyzer on the
 top 1000 npm projects and dive right into the results. These documents will be updated soon to cover
 that part of the r2c workflow as well; for now, don't hesitate to :email:`reach
 us<mailto:collaborate@returntocorp.com>` by email with any questions! Once you've successfully run
