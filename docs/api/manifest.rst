@@ -31,7 +31,10 @@ following fields in the top-level JSON object:
    
 **dependencies** : *object*
    This is the main mechanism by which analyzers interact with other analysis components in the r2c
-   system.  TODO
+   system.  Each key in this object is the name of another analyzer, such as
+   ``r2c/transpiler``. Each value is the version of the analyzer you want to use. An analyzer's
+   output for the same commit or repository appears under its name in ``/analysis/inputs`` when your
+   container runs, e.g. ``/analysis/inputs/r2c/transpiler``.
 
 **type** : *"constant", "commit", or "git"*
    The type of input for which this analyzer produces a unique output.
