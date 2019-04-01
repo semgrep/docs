@@ -70,6 +70,8 @@ Replace ``$CORPUS_NAME``, ``$ANALYZER_NAME``, ``$ANALYZER_VERSION`` (e.g. ``npm-
         AND commit_corpus.commit_hash = result.commit_hash 
   GROUP BY result.commit_hash;
 
+To learn more about available columns and tables, see the :doc:`../api/schemas` documentation.
+
 Using Jupyter Notebook with Python
 ----------------------------------
 
