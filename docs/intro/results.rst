@@ -37,6 +37,8 @@ Next, log in to your group or team's database, replacing ``$DB_PASSWORD`` and ``
 
 .. code-block:: console
 
+  $ export $DB_PASSWORD=[YOUR-DB-PASSWORD]
+  $ export $GROUP=[YOUR-GROUP]
   $ psql postgresql://notebook_user:$DB_PASSWORD@$GROUP-db.massive.ret2.co/postgres
 
   psql (10.6 (Ubuntu 10.6-0ubuntu0.18.04.1), server 9.6.8)
@@ -49,15 +51,24 @@ To see results:
 
 .. code-block:: console
 
-  postgres=> select * from result;
+  postgres=> SELECT * FROM result;
 
 At this stage you should see results! If you do not, confirm that you've run an analyzer and that it has reported success within the web UI.
 
 Now that we've selected all results (``select *``), we'll limit the search with a more complicated query to just the results relevant to your analyzer, the selected version, and the corpus you ran against.
 
+Replace ``$CORPUS_ID``, ``$ANALYZER_NAME``, ``$ANALYZER_VERSION`` (e.g. ``npm-1000-2019-01-01``, ``r2c/minifinder``, ``0.1.0``):
+
 .. code-block:: console
 
-  select result.commit_hash from result, commit_corpus where corpus_name = $CORPUS and analyzer_name = $ANALZYER and analyzer_version = $ANALYZER_VERSION and commit_corpus.commit_hash = result.commit_hash group by result.commit_hash
+  postgres=> SELECT result.commit_hash 
+  FROM  result, 
+        commit_corpus 
+  WHERE corpus_name = $CORPUS_ID 
+        AND analyzer_name = $ANALYZER_NAME 
+        AND analyzer_version = $ANALYZER_VERSION
+        AND commit_corpus.commit_hash = result.commit_hash 
+  GROUP BY result.commit_hash;
 
 Using Jupyter Notebook with Python
 ----------------------------------
