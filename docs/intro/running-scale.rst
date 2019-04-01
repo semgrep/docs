@@ -35,13 +35,12 @@ within the analyzer directory:
 
   $ r2c push
 
-That's it! Now let's head on over to :samp:`https://[YOUR-GROUP].massive.ret2.co/` to run your analyzer on the
-top 1000 npm projects and dive right into the results.
+That's it! Now let's head on over to :samp:`https://[YOUR-GROUP].massive.ret2.co/` to run your analyzer on 1000 npm projects and dive right into the results.
 
 Starting the Job
 ----------------
 
-Once you've logged in with Github, your group's Jobs page might look something like this:
+Once you've logged in with GitHub you'll be taken to your group's Jobs page, which will look similar to this:
 
 .. image:: images/r2c.png
    :alt: The r2c Jobs page
@@ -52,28 +51,13 @@ pushed!
 .. image:: images/analyzer.png
    :alt: Selecting the analyzer to run
 
-After that, we'll pick a data set to run our analyzer across. Let's use the top 1000 NPM packages as
-of the start of 2019 for this tutorial.
+Now we'll select a corpus to run our analyzer on: ``NPM 1k most downloaded, 2019-01-31``. This corpus has the 1000 most downlaoded npm packages on January 31st, 2019.
 
 .. image:: images/npm1k.png
-   :alt: Choosing the data set for our run.
+   :alt: Choosing the corpus to run your analyzer on.
 
-Click "Run Job" to start the analysis!
+Click "Run Job" to start the analysis! Your job will be added to the jobs list, where you can click on it to see output, console logs, and errors coming in in real time!
+
+See :doc:`results` for next steps.
       
-Viewing Results
----------------
-
-The job we started in the previous section may take a little while to run. The first time you run
-any job, it may take a while for the Docker image to reach all the machines running your
-analysis. Once that happens, it should proceed quickly and you should be able to get results within
-just a few minutes for your code. You can click on the job in the job list to see the output,
-console logs, and errors coming in in real time.
-
-Once the job has finished, click the "View results in notebook" button to be taken to your Jupyter
-notebook where you can query the results. Currently, this documentation doesn't cover that part of
-the r2c system. We're adding more documentation soon, bu for now, don't hesitate to :email:`reach
-us<mailto:collaborate@returntocorp.com>` by email with any questions!  Once you've successfully
-explored your analysis across 1000 projects, send us an email for access to larger and more powerful
-data sets, including the entire history of hundreds of thousands of packages on npm.
-
-Happy hacking!
+.. note:: When a job is first kicked off, your infrastructure may need to "warm up"; idle machines will start processing your job and new machines will be brought online to handle the demand. Once warmed up a job should proceed quickly and you'll get results within just a few minutes for quick analyzers like minifinder.
