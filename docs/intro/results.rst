@@ -47,7 +47,7 @@ Next, log in to your group or team's database, setting ``$DB_PASSWORD`` and ``$G
   
   postgres=>
 
-To see results:
+To see `all` results:
 
 .. code-block:: console
 
