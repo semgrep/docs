@@ -3,6 +3,10 @@ import pandas as pd
 import psycopg2
 from sqlalchemy import create_engine
 
+###################################
+# START OF EDITABLE CONSTANTS
+###################################
+
 GROUP = "YOUR-GROUP"
 DB_PASSWORD = "YOUR-DB-PASSWORD"
 
@@ -10,12 +14,11 @@ ANALYZER_NAME = f"{GROUP}/minifinder"
 ANALYZER_VERSION = "0.1.0"
 CORPUS_NAME = "npm-1000-2019-01-01"
 
-engine = create_engine(f'postgresql://notebook_user:{DB_PASSWORD}@{GROUP}-db.massive.ret2.co/postgres')
+###################################
+# END OF EDITABLE CONSTANTS
+###################################
 
-# N.B. We follow Pandas best practices by using query parameters rather than format strings or by concatenating items.
-#      These values will need to be changed to your analyzer's name, version, and a corpus you've successfully run on.
-
-analyzer_specific_query = """
+ANALYZER_SPECIFIC_QUERY = """
 SELECT result.commit_hash
 FROM  result,
       commit_corpus
@@ -32,5 +35,6 @@ QUERY_PARAMS = {
     "analyzer_version": ANALYZER_VERSION
 }
 
+engine = create_engine(f'postgresql://notebook_user:{DB_PASSWORD}@{GROUP}-db.massive.ret2.co/postgres')
 analyzer_specific_df = pd.read_sql(analyzer_specific_query, engine, params=QUERY_PARAMS)
 analyzer_specific_df
