@@ -3,8 +3,8 @@ import pandas as pd
 import psycopg2
 from sqlalchemy import create_engine
 
-GROUP = "r2c"
-DB_PASSWORD = "easy"
+GROUP = "YOUR-GROUP"
+DB_PASSWORD = "YOUR-DB-PASSWORD"
 
 ANALYZER_NAME = f"{GROUP}/minifinder"
 ANALYZER_VERSION = "0.1.0"
