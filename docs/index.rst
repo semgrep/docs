@@ -19,6 +19,3 @@ hundreds of millions of commits, and billions of lines of code - getting results
    api/index
    best-practices
    troubleshooting
-
-* :ref:`genindex`
-* :ref:`search`
