@@ -111,7 +111,7 @@ We need a place to write our data analysis Python code. To do so, create a new n
 .. image:: images/jupyter_empty.png
    :alt: Empty Jupyter Notebook notebook.
 
-In our new notebook we'll first establish a database connection, then use the same SQL commands as earlier, and finish by writing our data to a `Pandas dataframes <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html>`_ that can be manipulated, filtered, and edited.
+In our new notebook we'll first establish a database connection, then use the same SQL commands as earlier, and finish by writing our data to a `Pandas dataframe <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html>`_ that can be manipulated, filtered, and edited.
 
 Copy the following into your notebook and update the string constants for your specific environment (e.g. ``GROUP``):
 
