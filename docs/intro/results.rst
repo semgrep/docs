@@ -57,14 +57,14 @@ At this stage you should see results! If you do not, confirm that you've run an 
 
 Now that we've selected all results (``select *``), we'll limit the search with a more complicated query to just the results relevant to your analyzer, the selected version, and the corpus you ran against.
 
-Replace ``$CORPUS_ID``, ``$ANALYZER_NAME``, ``$ANALYZER_VERSION`` (e.g. ``npm-1000-2019-01-01``, ``r2c/minifinder``, ``0.1.0``):
+Replace ``$CORPUS_NAME``, ``$ANALYZER_NAME``, ``$ANALYZER_VERSION`` (e.g. ``npm-1000-2019-01-01``, ``r2c/minifinder``, ``0.1.0``):
 
 .. code-block:: console
 
   postgres=> SELECT result.commit_hash 
   FROM  result, 
         commit_corpus 
-  WHERE corpus_name = $CORPUS_ID 
+  WHERE corpus_name = $CORPUS_NAME
         AND analyzer_name = $ANALYZER_NAME 
         AND analyzer_version = $ANALYZER_VERSION
         AND commit_corpus.commit_hash = result.commit_hash 
@@ -73,9 +73,9 @@ Replace ``$CORPUS_ID``, ``$ANALYZER_NAME``, ``$ANALYZER_VERSION`` (e.g. ``npm-10
 Using Jupyter Notebook with Python
 ----------------------------------
 
-When SQL queries aren't sufficient, or we want to programatically interact with the data, we recommend `Jupyter Notebook <https://jupyter.org/>`_.
+SQL queries by themselves won't always be enough for data analysis, so we'll use `Jupyter Notebook <https://jupyter.org/>`_ to crunch the numbers and identify minified files.
 
-To standup a Jupyter Notebook instance locally using docker [#jupyter-tut]_:
+Run a Jupyter Notebook instance locally with docker [#jupyter-tut]_:
 
 .. code-block:: console
 
@@ -96,14 +96,25 @@ To standup a Jupyter Notebook instance locally using docker [#jupyter-tut]_:
   [I 04:01:38.838 NotebookApp] http://(5d73df7e3877 or 127.0.0.1):8888/?token=<TOKEN>
   [I 04:01:38.838 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
   
-Following the instructions printed out to your terminal, navigate to Jupyter in your browser (e.g. ``http://localhost:8888/?token=<TOKEN>``).
+Next, open Jupyter in your browser (see the instructions printed to your terminal from the running container). Your home page will look like:
 
 .. image:: images/jupyter_home.png
-   :alt: Empty home page of Jupyter Notebook.
+   :alt: Home page for Jupyter Notebook.
 
+We need a place to write our data analysis. Create a new notebook by clicking ``New`` in the upper right hand corner.
 
-* create a new notebook
-* do analysis to find minified files
-* graph them?
+.. image:: images/jupyter_new_dropdown.png
+   :alt: An open "New" dropdown to create notebooks or terminals.
+
+.. image:: images/jupyter_empty.png
+   :alt: Empty Jupyter Notebook notebook.
+
+In our new notebook we'll establish a database connection, use the same SQL commands as earlier, and finish by writing our data to a `Pandas dataframes <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html>`_.
+
+Copy the following into your notebook and update the string constants for your specific environment (e.g. ``GROUP``):
+
+.. literalinclude:: samples/jupyter-sample.py
+    :linenos:
+    :language: python
 
 .. [#jupyter-tut] `Jupyter Docker Stacks, Running a Container <https://jupyter-docker-stacks.readthedocs.io/en/latest/using/running.html#running-a-container>`_
