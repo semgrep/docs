@@ -6,6 +6,6 @@ The r2c analysis API has three main parts - the ``analyzer.json`` manifest file 
 .. toctree::
 
    manifest
-   output
-   containers
    schemas
+   containers
+   output
