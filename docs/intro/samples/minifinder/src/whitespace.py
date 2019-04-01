@@ -7,7 +7,7 @@ WHITESPACE_RE = re.compile("\s")
 
 
 def count_whitespace(path):
-    # print("Counting whitespace in file {}".format(path))
+    print("Counting whitespace in file {}".format(path))
     with open(path, "r", encoding="utf-8") as file:
         data = file.read()
     result = {}
@@ -21,8 +21,7 @@ def count_whitespace(path):
 
 all_results = []
 for path in sys.argv[1:]:
-    if os.path.isabs(path):
-        all_results.append(count_whitespace(os.path.abspath(path)))
+    all_results.append(count_whitespace(os.path.abspath(path)))
 
 with open("/analysis/output/output.json", "w") as output:
     output.write(json.dumps({"results": all_results}, sort_keys=True, indent=4))
