@@ -72,8 +72,8 @@ Replace ``$CORPUS_NAME``, ``$ANALYZER_NAME``, ``$ANALYZER_VERSION`` (e.g. ``npm-
 
 To learn more about available columns and tables, see the :doc:`../api/schemas` documentation.
 
-Using Jupyter Notebook with Python
-----------------------------------
+[Optional] Using Jupyter Notebook with Python
+---------------------------------------------
 
 SQL queries by themselves won't always be enough for data analysis, so we'll use `Jupyter Notebook <https://jupyter.org/>`_ to crunch the numbers and identify minified files.
 
