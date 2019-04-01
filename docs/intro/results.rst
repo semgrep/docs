@@ -96,24 +96,14 @@ To standup a Jupyter Notebook instance locally using docker [#jupyter-tut]_:
   [I 04:01:38.838 NotebookApp] http://(5d73df7e3877 or 127.0.0.1):8888/?token=<TOKEN>
   [I 04:01:38.838 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
   
-Following the instructions printed out to your terminal, navigate to Jupyter in your browser.
+Following the instructions printed out to your terminal, navigate to Jupyter in your browser (e.g. ``http://localhost:8888/?token=<TOKEN>``).
 
-<image of jupyter>
-
-.. code-block:: console
-
-  $ pip install psycopg2-binary
-  Collecting psycopg2-binary
-  Downloading https://files.pythonhosted.org/packages/04/c3/fbf0ec416151ce082087bfbb42f236ec42c2c74d2d9f7a5b5cdf49cfc517/psycopg2_binary-2.7.7-cp37-cp37m-manylinux1_x86_64.whl (2.7MB)
-    100% |████████████████████████████████| 2.7MB 3.5MB/s
-  Installing collected packages: psycopg2-binary
-  Successfully installed psycopg2-binary-2.7.7
+.. image:: images/jupyter_home.png
+   :alt: Empty home page of Jupyter Notebook.
 
 
-
- * install psycopg2
- * create a new notebook
- * do analysis to find minified files
- * graph them?
+* create a new notebook
+* do analysis to find minified files
+* graph them?
 
 .. [#jupyter-tut] `Jupyter Docker Stacks, Running a Container <https://jupyter-docker-stacks.readthedocs.io/en/latest/using/running.html#running-a-container>`_
