@@ -33,7 +33,7 @@ After installation, confirm it's available on your path.
 	Is the server running locally and accepting
 	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
 
-Next, log in to your group or team's database, replacing ``$DB_PASSWORD`` and ``$GROUP`` (contact us if you don't know these values).
+Next, log in to your group or team's database, setting ``$DB_PASSWORD`` and ``$GROUP`` (contact us if you don't know these values).
 
 .. code-block:: console
 
@@ -96,12 +96,12 @@ Run a Jupyter Notebook instance locally with docker [#jupyter-tut]_:
   [I 04:01:38.838 NotebookApp] http://(5d73df7e3877 or 127.0.0.1):8888/?token=<TOKEN>
   [I 04:01:38.838 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
   
-Next, open Jupyter in your browser (see the instructions printed to your terminal from the running container). Your home page will look like:
+Next, open Jupyter in your browser (see the instructions printed to your terminal from the running container).
 
 .. image:: images/jupyter_home.png
    :alt: Home page for Jupyter Notebook.
 
-We need a place to write our data analysis. Create a new notebook by clicking ``New`` in the upper right hand corner.
+We need a place to write our data analysis Python code. To do so, create a new notebook by clicking ``New`` in the upper right hand corner of the file tree pane.
 
 .. image:: images/jupyter_new_dropdown.png
    :alt: An open "New" dropdown to create notebooks or terminals.
@@ -109,12 +109,14 @@ We need a place to write our data analysis. Create a new notebook by clicking ``
 .. image:: images/jupyter_empty.png
    :alt: Empty Jupyter Notebook notebook.
 
-In our new notebook we'll establish a database connection, use the same SQL commands as earlier, and finish by writing our data to a `Pandas dataframes <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html>`_.
+In our new notebook we'll first establish a database connection, then use the same SQL commands as earlier, and finish by writing our data to a `Pandas dataframes <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html>`_ that can be manipulated, filtered, and edited.
 
 Copy the following into your notebook and update the string constants for your specific environment (e.g. ``GROUP``):
 
 .. literalinclude:: samples/jupyter-sample.py
     :linenos:
     :language: python
+
+With this copied, we're ready to run the code!
 
 .. [#jupyter-tut] `Jupyter Docker Stacks, Running a Container <https://jupyter-docker-stacks.readthedocs.io/en/latest/using/running.html#running-a-container>`_
