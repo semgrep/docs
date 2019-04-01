@@ -13,7 +13,7 @@ We'll use both in this tutorial to explore the available tables, data, and to fi
 Using ``psql``
 --------------
 
-First, install ``psql``.
+First, install ``psql`` on your terminal.
 
 .. code-block:: console
 
@@ -73,12 +73,47 @@ Replace ``$CORPUS_ID``, ``$ANALYZER_NAME``, ``$ANALYZER_VERSION`` (e.g. ``npm-10
 Using Jupyter Notebook with Python
 ----------------------------------
 
-TODO
-* more comprehensive data analysis and data science work. Recommend using docker here and running Jupyter locally.
-* run docker
- * we've already set up for sqlalchemy
+When SQL queries aren't sufficient, or we want to programatically interact with the data, we recommend `Jupyter Notebook <https://jupyter.org/>`_.
+
+To standup a Jupyter Notebook instance locally using docker [#jupyter-tut]_:
+
+.. code-block:: console
+
+  $ docker run -p 8888:8888 jupyter/scipy-notebook:latest
+  Unable to find image 'jupyter/scipy-notebook:latest' locally
+  latest: Pulling from jupyter/scipy-notebook
+  a48c500ed24e: Already exists
+  ...
+  b1ae2d961bf6: Download complete
+  Digest: sha256:3abebd0ed8ba4f6c6c3c92c0294ce3f0379e4db363c621411af6f9efcb7d97e8
+  Status: Downloaded newer image for jupyter/scipy-notebook:latest
+  Executing the command: jupyter notebook
+  [I 04:01:37.656 NotebookApp] Writing notebook server cookie secret to /home/jovyan/.local/share/jupyter/runtime/  notebook_cookie_secret
+  [I 04:01:38.835 NotebookApp] JupyterLab extension loaded from /opt/conda/lib/python3.7/site-packages/jupyterlab
+  [I 04:01:38.836 NotebookApp] JupyterLab application directory is /opt/conda/share/jupyter/lab
+  [I 04:01:38.838 NotebookApp] Serving notebooks from local directory: /home/jovyan
+  [I 04:01:38.838 NotebookApp] The Jupyter Notebook is running at:
+  [I 04:01:38.838 NotebookApp] http://(5d73df7e3877 or 127.0.0.1):8888/?token=<TOKEN>
+  [I 04:01:38.838 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+  
+Following the instructions printed out to your terminal, navigate to Jupyter in your browser.
+
+<image of jupyter>
+
+.. code-block:: console
+
+  $ pip install psycopg2-binary
+  Collecting psycopg2-binary
+  Downloading https://files.pythonhosted.org/packages/04/c3/fbf0ec416151ce082087bfbb42f236ec42c2c74d2d9f7a5b5cdf49cfc517/psycopg2_binary-2.7.7-cp37-cp37m-manylinux1_x86_64.whl (2.7MB)
+    100% |████████████████████████████████| 2.7MB 3.5MB/s
+  Installing collected packages: psycopg2-binary
+  Successfully installed psycopg2-binary-2.7.7
+
+
+
+ * install psycopg2
  * create a new notebook
- * run following query to show data
-  * notice that this is basically just the psql commands we ran earlier
-* do analysis to find minified files
-* graph them?
+ * do analysis to find minified files
+ * graph them?
+
+.. [#jupyter-tut] `Jupyter Docker Stacks, Running a Container <https://jupyter-docker-stacks.readthedocs.io/en/latest/using/running.html#running-a-container>`_
