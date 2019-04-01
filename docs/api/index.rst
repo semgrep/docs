@@ -8,3 +8,4 @@ The r2c analysis API has three main parts - the ``analyzer.json`` manifest file 
    manifest
    output
    containers
+   schemas
