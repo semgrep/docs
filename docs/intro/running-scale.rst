@@ -61,3 +61,5 @@ Click "Run Job" to start the analysis! Your job will be added to the jobs list, 
 See :doc:`results` for next steps.
       
 .. note:: When a job is first kicked off, your infrastructure may need to "warm up"; idle machines will start processing your job and new machines will be brought online to handle the demand. Once warmed up a job should proceed quickly and you'll get results within just a few minutes for quick analyzers like minifinder.
+
+.. note:: We currently limit your container to running for 5 minutes with 1.5GB and of memory. You shouldn't be worried about hitting this limit with most simple analyzers, but look out for timeout and out-of-memory errors if you're trying to push the limits.
