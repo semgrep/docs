@@ -4,6 +4,8 @@ Installation
 Requirements
 ------------
 
+.. note:: We currently support Ubuntu and Mac OSX for running ``r2c`` and developing analyzers. While not officially supported, some users have used Windows Subsystem for Linux (WSL) on Windows 10.
+
 Before beginning, you'll need to install:
 
 * `Docker`_, a tool for running software in isolated containers
