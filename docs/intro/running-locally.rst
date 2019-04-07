@@ -37,5 +37,5 @@ should look something like this:
 Cool! Now we can hunt for minified files. All of these files look reasonable; though we don't know
 exactly what our threshold should be, minified files will probably be less than 5 to 10 percent
 whitespace. To find minified files in top projects and get a sense of what cut-off point to use,
-we'll want to run this analyzer at scale against npm packages - perhaps the top< 1000 to start. To
+we'll want to run this analyzer at scale against npm packages - perhaps the top 1000 to start. To
 get started, head on over to :doc:`running-scale`.

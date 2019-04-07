@@ -51,7 +51,7 @@ pushed!
 .. image:: images/analyzer.png
    :alt: Selecting the analyzer to run
 
-Now we'll select a corpus to run our analyzer on: ``NPM 1k most downloaded, 2019-01-31``. This corpus has the 1000 most downlaoded npm packages on January 31st, 2019.
+Now we'll select a corpus to run our analyzer on: ``r2c npm 1000, 2019-04-01``.
 
 .. image:: images/npm1k.png
    :alt: Choosing the corpus to run your analyzer on.
