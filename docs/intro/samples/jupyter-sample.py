@@ -13,7 +13,7 @@ DB_PASSWORD = "YOUR-DB-PASSWORD"
 
 ANALYZER_NAME = f"{GROUP}/minifinder"
 ANALYZER_VERSION = "0.1.0"
-CORPUS_NAME = "npm-1000-2019-01-01"
+CORPUS_NAME = "r2c-1000"
 
 ###################################
 # END EDIT SECTION
@@ -44,8 +44,14 @@ job_df = pd.read_sql(JOB_QUERY, engine, params=QUERY_PARAMS)
 print("Raw job dataframe:")
 print(job_df[1:10])
 
-# Add 'percent_whitespace' column, computed from the whitespace and total fields in our 'extra' column
-job_df['percent_whitespace'] = job_df.apply(lambda row: row['extra']['whitespace']/row['extra']['total'], axis=1)
+# Helper method to compute % whitespace from the num_whitespace and size fields in our 'extra' column
+def get_percent_whitespace(row):
+    size = row.extra['size']
+    # Avoid 'division by zero' exceptions.
+    return row.extra['num_whitespace'] / size if size else 0
+
+# Add 'percent_whitespace' column
+job_df['percent_whitespace'] = job_df.apply(get_percent_whitespace, axis=1)
 
 # Create a histogram of our data using the `percent_whitespace` column
 job_df.hist(column="percent_whitespace", bins=100)
