@@ -7,9 +7,9 @@ If the ``/analysis`` directory doesn't even have ``inputs`` and ``output`` subdi
 
 .. code-block:: console
 
-   $ mkdir /tmp/dummy
-   $ touch /tmp/dummy/data
-   $ docker run --volume /tmp/dummy:/dummy alpine:latest ls -l /dummy
+   $ tempdir=$(mktemp -d)
+   $ touch $tempdir/data
+   $ docker run --volume $tempdir:/dummy alpine:latest ls -l /dummy
 
 You should see a single line of output:
 
@@ -17,7 +17,9 @@ You should see a single line of output:
 
    total 0
 
-If this is the case, then Docker can't mount folders inside /tmp. This can happen if you installed Docker via the snap package manager (i.e., ``which docker`` shows a path starting with ``/snap``). If you did that, you'll need to run ``sudo snap remove docker`` and then reinstall Docker via your package manager or a similar method.
+If this is the case, then Docker can't mount folders inside /tmp. This can happen if you installed Docker via the snap package manager (i.e., ``which docker`` shows a path starting with ``/snap``). If you did that, you'll need to run ``sudo snap remove docker`` and then `reinstall Docker`_ via your package manager or a similar method.
+
+.. _reinstall docker: https://docs.docker.com/install/
 
 If you see two lines of output like
 
