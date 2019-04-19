@@ -20,6 +20,8 @@ Follow those links to get both of those set up on your operating system and come
 
 .. note:: You'll need to be able to run ``docker`` as the same user you want to run ``r2c``. For linux users: Rather than run ``r2c`` as a root or system administrator, we highly encourage `setting up Docker for regular users <https://docs.docker.com/install/linux/linux-postinstall/#manage-docker-as-a-non-root-user>`_.
 
+.. attention:: Installing Docker via the ``snap`` installer is incompatible with ``r2c``.
+
 .. highlight:: text
 
 Checking that docker works:
