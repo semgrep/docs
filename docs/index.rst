@@ -8,7 +8,7 @@ is a command line tool for writing and running program analysis components to ru
 scale. With just a few minutes of setup you can start analyzing hundreds of thousands of projects,
 hundreds of millions of commits, and billions of lines of code - getting results at scale on the
 ``r2c`` platform in under an hour. This is the documentation for the beta release (version
-|release|) of the ``r2c`` tool. If you're new here, we recommend going to :doc:`intro/index`.
+|release|) of the ``r2c`` tool. ``r2c`` is maintained by `r2c <https://r2c.dev>`_  If you're new here, we recommend going to :doc:`intro/index`.
 
 .. toctree::
    :maxdepth: 2
