@@ -1,26 +1,29 @@
 Installation
 ============
 
+We'll start our journey with ``r2c-cli``, which is used to develop and test analyzers locally before pushing them to the platform to run at scale.
+
 Requirements
 ------------
 
-.. note:: We currently support Ubuntu and Mac OSX for running ``r2c`` and developing analyzers. While not officially supported, some users have used Windows Subsystem for Linux (WSL) on Windows 10.
+.. note:: We support Mac OSX and Ubuntu for local analyzer development.
 
-Before beginning, you'll need to install:
+Please install the following required software:
 
-* `Docker`_, a tool for running software in isolated containers
-* `Python 3`_, the programming language needed to run (but not develop analysis with) ``r2c``
-* `pip`_, the package manager for Python used to install and obtain updates for ``r2c``.
+* `docker`_: a tool for running software in isolated containers
+* `python3`_: the programming language needed to run (but not to develop) analyzers
+* `pip3`_: the Python package manager used to install and update ``r2c-cli``
 
 .. _docker: https://docs.docker.com/install/
-.. _Python 3: https://docs.python.org/3/using/index.html
-.. _pip: 
+.. _python3: https://docs.python.org/3/using/index.html
+.. _pip3: https://pip.pypa.io/en/stable/
 
-Follow those links to get both of those set up on your operating system and come back here when you're ready to proceed. Chances are, your installation of python already comes with pip, so it should only be two steps! To check if everything works, you can run the following commands:
+When installing ``docker``:
 
-.. note:: You'll need to be able to run ``docker`` as the same user you want to run ``r2c``. For linux users: Rather than run ``r2c`` as a root or system administrator, we highly encourage `setting up Docker for regular users <https://docs.docker.com/install/linux/linux-postinstall/#manage-docker-as-a-non-root-user>`_.
+- Do not use ``snap``, it is incompatible with ``r2c-cli``
+- For Ubuntu users we highly encourage `setting up Docker for regular users <https://docs.docker.com/install/linux/linux-postinstall/#manage-docker-as-a-non-root-user>`_. You need to run ``docker`` as the same user you'll run ``r2c-cli`` with, and we discourage running ``r2c-cli`` as a root or system administrator
 
-.. attention:: Installing Docker via the ``snap`` installer is incompatible with ``r2c``.
+Once you've installed ``docker``, ``python3``, and ``pip3``, run the following commands to ensure everything is installed properly:
 
 .. highlight:: text
 
