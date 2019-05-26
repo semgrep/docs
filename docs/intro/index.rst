@@ -1,7 +1,7 @@
 Getting Started
 ===============
 
-This section is a brief tutorial for getting started with ``r2c``. For detailed documentation of the commands, options, and formats in this section, see the other sections of this documentation or the links throughout this tutorial.
+This section will walk you through using ``r2c-cli`` and the platform. For detailed documentation of commands, options, and formats, see :doc:`../api/index`.
 
 .. toctree::
 
