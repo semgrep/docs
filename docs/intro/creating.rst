@@ -4,20 +4,19 @@ Creating an Analyzer
 Logging in to r2c
 -----------------
 
-.. highlight:: text
+.. note:: This section requires you to be a member of the ``r2c`` beta. Please skip it if you're doing local only development and/or are not currently part of the beta.
 
-Before you create analyzers, you'll need to log in to your org on ``r2c``. This gives you the
-ability to download other published analyzers and publish your own analyzers for others to use. If
-somebody in your org has already added your Github account to the org, then logging in is as
-simple as running:
+To download and publish analyzers you'll need to log in to the ``r2c`` platform.
 
 .. code-block:: console
 
   $ r2c login
+  Please enter your org name, or to use the common r2c platform, press enter [wildwest]:
+  Opening web browser to get login token. Do you want to continue? [Y/n]:
+  trying to open https://app.r2c.dev/settings/token in your browser...
+  Please enter the API token: ...
 
-and following the instructions. If you don't have an org name, :email:`contact
-us<mailto:collaborate@returntocorp.com>`!  We're happy to support new projects on the ``r2c``
-platform.
+Follow the on-screen instructions, accepting the default ``wildwest`` org name (which is tied to the beta).
 
 Creating the Boilerplate
 ------------------------
