@@ -23,24 +23,15 @@ When installing ``docker``:
 - Do not use ``snap``, it is incompatible with ``r2c-cli``
 - For Ubuntu users we highly encourage `setting up Docker for regular users <https://docs.docker.com/install/linux/linux-postinstall/#manage-docker-as-a-non-root-user>`_. You need to run ``docker`` as the same user you'll run ``r2c-cli`` with, and we discourage running ``r2c-cli`` as a root or system administrator
 
-Once you've installed ``docker``, ``python3``, and ``pip3``, run the following commands to ensure everything is installed properly:
-
-.. highlight:: text
-
-Checking that docker works:
+Run the following to test ``docker``, ``python3``, and ``pip3`` installation:
 
 .. code-block:: console
 
   $ docker run hello-world
-
-Checking that python and pip work:
-
-.. code-block:: console
-
   $ python3 --version
   $ pip3 --version
    
-Getting the r2c CLI
+Getting ``r2c-cli``
 -------------------
 
 It's easy! Just run:
@@ -49,9 +40,7 @@ It's easy! Just run:
 
   $ pip3 install r2c-cli
 
-.. note:: If you already have ``r2c`` installed and want to upgrade, run ``pip3 install -U r2c-cli``. ``r2c`` is still in beta, so check back here and upgrade early and often - we're making it better every day.
-
-To verify that your installation of ``r2c`` works, run:
+To verify the ``r2c-cli`` installation, run:
 
 .. code-block:: console
 
@@ -76,4 +65,4 @@ To verify that your installation of ``r2c`` works, run:
     test      Locally run integration tests for the current analyzer.
     unittest  Locally unit tests for the current analyzer directory.
   
-If the help prompt successfully prints, you're ready to move on to :doc:`creating`.
+If the help prompt prints, you're ready to move on to :doc:`creating`.
