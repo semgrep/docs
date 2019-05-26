@@ -1,22 +1,19 @@
 Writing Analysis
 ================
 
-For this tutorial, we'll write an analysis that reports **how much of each file in a project
-is whitespace**. We'll use it to find which projects have checked in `minified JavaScript files`, so
-we've called it **minifinder**.
+For this tutorial, we're writing an analysis that reports **how much of each file in a project
+is whitespace**. We'll use it to find which projects have checked in `minified JavaScript files`_.
 
 .. _minified JavaScript files: https://en.wikipedia.org/wiki/Minification_(programming)
 
 Setting up the Container
 ------------------------
 
-.. highlight:: text
-
 We will write this analysis in the Python programming language. Though we are using Python for this
 tutorial, **you can write analysis in any programming language** as each Docker container can have
 different software installed.
 
-Before we can write python, we'll need to install it in our Docker container. To do this, add the
+Before we can write Python, we'll need to install it in our Docker container. To do this, add the
 following line to the project's Dockerfile:
 
 .. literalinclude:: samples/minifinder/Dockerfile
@@ -43,8 +40,8 @@ arguments.
 
 We write this object to ``/analysis/output/output.json`` because this is a JSON-type analyzer. r2c
 also supports filesystem type analyzers, that modify or augment their input but want to preserve a
-filesystem structure or output large binary data, e.g. neural net training results. Most analyses
-eventually lead to JSON output, because JSON output is what gets used by all of the other r2c tools.
+filesystem structure or output large binary data, e.g. neural net training results. Most analysis
+eventually leads to JSON output, because JSON output is what gets consumed r2c's other tools.
 
 To get just JavaScript files, we'll use the ``find`` program on our mounted source-code
 directory. Change ``src/analyze.sh`` to look like this:
