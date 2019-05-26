@@ -5,4 +5,4 @@ CODE_DIR="/analysis/inputs/public/source-code"
 
 cd ${CODE_DIR}
 
-find . -name '*.js' | xargs python3 /analyzer/whitespace.py
+find . -type f -name '*.js' -print0 | xargs -0 python3 /analyzer/whitespace.py
