@@ -24,9 +24,9 @@ copyright = '2019, r2c'
 author = 'r2c'
 
 # The short X.Y version
-version = '0.0.17'
+version = '0.0.18'
 # The full version, including alpha/beta/rc tags
-release = '0.0.17'
+release = version
 
 # -- General configuration ---------------------------------------------------
 
@@ -85,7 +85,7 @@ html_theme = 'alabaster'
 # documentation.
 #
 html_theme_options = {
-    'description': 'A command-line tool for developing program analysis',
+    'description': 'Distributed program analysis for the open-source community',
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,

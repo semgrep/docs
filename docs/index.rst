@@ -1,14 +1,20 @@
 .. title:: Welcome
 
-Program analysis, leveled up
-============================
+r2c
+===
 
-So, you want to write program analysis - you've come to the right place. Welcome to ``r2c``! ``r2c``
-is a command line tool for writing and running program analysis components to run at massive
-scale. With just a few minutes of setup you can start analyzing hundreds of thousands of projects,
-hundreds of millions of commits, and billions of lines of code - getting results at scale on the
-``r2c`` platform in under an hour. This is the documentation for the beta release (version
-|release|) of the ``r2c`` tool. ``r2c`` is written by `r2c <https://r2c.dev>`_  If you're new here, we recommend going to :doc:`intro/index`.
+.. note:: This documentation is for our closed beta as of release |release|. Visit `app.r2c.dev <https://app.r2c.dev>`_ to join the waitlist!
+
+``r2c`` is a program analysis platform and cli for security researchers, hackers, and developers. Run your analysis on our infrastructure to quicky get results for millions of projects.
+
+The platform offers:
+
+1. scale: run your analysis at large scale across millions of open-source projects and their history
+2. re-use: create analysis pipelines with reusable analyzers and shared results
+3. determinism: easily define source code targets from GitHub, npm, PyPi, and others
+4. collaboration & feedback: collaboratively triage, label, and disclose results
+
+Have questions about the beta, ``r2c``, or our `fellowships <https://jobs.lever.co/returntocorp/f1ced85d-2771-4142-907f-8cca8899369d>`_? We'd love to help! Contact us at `hello@r2c.dev <mailto:hello@r2c.dev>`_.
 
 .. toctree::
    :maxdepth: 2
