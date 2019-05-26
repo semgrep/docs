@@ -19,7 +19,7 @@ following line to the project's Dockerfile:
 .. literalinclude:: samples/minifinder/Dockerfile
     :linenos:
     :language: dockerfile
-    :emphasize-lines: 3
+    :emphasize-lines: 3-4
 
 When we edit our code later, the container will automatically be rebuilt by ``r2c run``.
 
