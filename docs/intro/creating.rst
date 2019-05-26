@@ -6,16 +6,16 @@ Logging in to r2c
 
 .. highlight:: text
 
-Before you create analyzers, you'll need to log in to your group on ``r2c``. This gives you the
+Before you create analyzers, you'll need to log in to your org on ``r2c``. This gives you the
 ability to download other published analyzers and publish your own analyzers for others to use. If
-somebody in your group has already added your Github account to the group, then logging in is as
+somebody in your org has already added your Github account to the org, then logging in is as
 simple as running:
 
 .. code-block:: console
 
   $ r2c login
 
-and following the instructions. If you don't have a group name, :email:`contact
+and following the instructions. If you don't have an org name, :email:`contact
 us<mailto:collaborate@returntocorp.com>`!  We're happy to support new projects on the ``r2c``
 platform.
 
@@ -72,7 +72,7 @@ Each of these files is used by the ``r2c`` system in a different way.
   important values in this file are:
 
  * ``analyzer_name``: The namespaced analyzer name. The name you entered has been combined with your
-   group name - this is because you can only develop analyzers within your group.
+   org name - this is because you can only develop analyzers within your org.
 
  * ``version``: The version of the analyzer. *Versions should follow semantic versioning*. ``r2c``
    uses the analyzer name, version, and other parameters for caching: when running an analyzer at

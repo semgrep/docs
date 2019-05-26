@@ -5,7 +5,7 @@ Analyzing Results
 
 Now that your analyzer has been run in the web UI (and completed successfully, we hope!) we'll write some Python to load and graph the results.
 
-When you run an analyzer on the r2c platform we store the results in a group or team specific PostgreSQL database. To interact with this database, we'll use a mix of `sqlalchemy <https://www.sqlalchemy.org/>`_, `psycopg2 <http://initd.org/psycopg/>`_, `pandas <https://pandas.pydata.org/>`_, and `matplotlib <https://matplotlib.org/>`_ Python libraries. Let's install these in your local environment:
+When you run an analyzer on the r2c platform we store the results in a PostgreSQL database. To interact with this database, we'll use a mix of `sqlalchemy <https://www.sqlalchemy.org/>`_, `psycopg2 <http://initd.org/psycopg/>`_, `pandas <https://pandas.pydata.org/>`_, and `matplotlib <https://matplotlib.org/>`_ Python libraries. Let's install these in your local environment:
 
 .. code-block:: console
 
@@ -17,7 +17,7 @@ Next, create a file in a scratch directory called ``minifinder-results.py``:
 
   $ touch minifinder-results.py
 
-Copy the following code into ``minifinder-results.py`` and update the constants with your group's or tenant's information:
+Copy the following code into ``minifinder-results.py`` and update the constants with your org information:
 
 .. literalinclude:: samples/jupyter-sample.py
     :linenos:

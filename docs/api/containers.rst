@@ -13,7 +13,7 @@ Dependencies for analyzers are mounted into the container at ``/analysis/inputs`
 specifying dependencies, see :ref:`manifest`.
 
 All dependency names must also be valid Linux filesystem paths; this enables r2c to mount each
-dependency in a subfolder matching the group and analyzer name. For example, for the ``transpiler``
+dependency in a subfolder matching the org and analyzer name. For example, for the ``transpiler``
 analyzer published by ``r2c``, specified in the dependency object as ``"r2c/transpiler": "1.0.0"``,
 its output will appear under ``/analysis/inputs/r2c/transpiler``.
 

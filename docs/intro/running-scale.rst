@@ -40,7 +40,7 @@ That's it! Now let's head on over to :samp:`https://[YOUR-GROUP].massive.ret2.co
 Starting the Job
 ----------------
 
-Once you've logged in with GitHub you'll be taken to your group's Jobs page, which will look similar to this:
+Once you've logged in with GitHub you'll be taken to your org's Jobs page, which will look similar to this:
 
 .. image:: images/r2c.png
    :alt: The r2c Jobs page

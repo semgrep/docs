@@ -5,9 +5,7 @@ The current version of the ``analyzer.json`` specification is ``1.0.0``. This ve
 following fields in the top-level JSON object:
 
 **analyzer_name** : *string*
-   The name of the analyzer. All analyzers must belong to a group, e.g. ``r2c/transpiler``. Only
-   special built-in analyzers have names that are not namespaced, such as the ``source-code``
-   component.
+   The name of the analyzer. All analyzers must belong to an org, e.g. ``r2c/transpiler``.
 
 **author_name** : *string*
    The name of the author.
