@@ -1,24 +1,6 @@
 Creating an Analyzer
 =====================
 
-Logging in to r2c
------------------
-
-.. highlight:: text
-
-Before you create analyzers, you'll need to log in to your group on ``r2c``. This gives you the
-ability to download other published analyzers and publish your own analyzers for others to use. If
-somebody in your group has already added your Github account to the group, then logging in is as
-simple as running:
-
-.. code-block:: console
-
-  $ r2c login
-
-and following the instructions. If you don't have a group name, :email:`contact
-us<mailto:collaborate@returntocorp.com>`!  We're happy to support new projects on the ``r2c``
-platform.
-
 Creating the Boilerplate
 ------------------------
 
@@ -28,13 +10,13 @@ In a directory where you want to create your new analyzer, run:
 
   $ r2c init
 
-For the ``Analyzer name`` prompt, enter **minifinder**. For the rest of the prompts we'll use
-the defaults by pressing enter.
+For the ``Analyzer name`` prompt, enter ``<YOUR-USERNAME>-minifinder``. For the rest of the prompts we'll use
+the defaults.
 
 .. code-block:: console
 
   $ r2c init
-  Analyzer name [example]: minifinder
+  Analyzer name (can only contain lowercase letters, numbers or - and _): <YOUR-USERNAME>-minifinder
   Author name [Jav A. Script]:
   Author email [hello@example.com]:
   Will your analyzer produce:
@@ -44,45 +26,45 @@ the defaults by pressing enter.
   Does your analyzer output
   - a single schema-compliant JSON file
   - a full filesystem output? (json, filesystem) [json]:
-  ✅ Done! Your analyzer can be found in the minifinder directory
+  ✔ Done! Your analyzer can be found in the <YOUR-USERNAME>-minifinder directory
 
 Check it out by changing to the new folder:
 
 .. code-block:: console
 
-   $ cd minifinder/
+   $ cd <YOUR-USERNAME>-minifinder/
 
 Understanding Analyzer Files
 ----------------------------
 
-The ``init`` command created several files in the ``minifinder`` folder:
+The ``init`` command created several files in the directory you initialized:
 
 .. code-block:: text
 
   .
-  ├── analyzer.json
   ├── Dockerfile
+  ├── README.md
+  ├── analyzer.json
   └── src
       ├── analyze.sh
       └── unittest.sh
 
-Each of these files is used by the ``r2c`` system in a different way.
+Each of these files is used by the r2c system in a different way.
   
-* ``analyzer.json`` defines how the analyzer will interact with the ``r2c`` system and tools. Some
+* ``analyzer.json`` defines how your analyzer will interact with the r2c system and tools. Some
   important values in this file are:
 
- * ``analyzer_name``: The namespaced analyzer name. The name you entered has been combined with your
-   group name - this is because you can only develop analyzers within your group.
+ * ``analyzer_name``: The namespaced analyzer name. For the beta, all analyzers must be namespaced with ``beta`` to be uploaded to the platform.
 
- * ``version``: The version of the analyzer. *Versions should follow semantic versioning*. ``r2c``
+ * ``version``: The version of the analyzer. *Versions should follow semantic versioning*. r2c
    uses the analyzer name, version, and other parameters for caching: when running an analyzer at
    scale, all of these are used to determine if the analysis has already been run on that piece of
    code.
 
- * ``dependencies``: This analyzer depends on the most basic component, ``source-code``. It
-   specifies that it depends on any version of the ``source-code`` component by specifying ``"*"``
+ * ``dependencies``: This analyzer depends on the most basic component, ``public/source-code``. It
+   specifies that it depends on any version of the ``public/source-code`` component by specifying ``"*"``
    as the version. For more complicated analysis, we could depend on components such as
-   ``r2c/transpiler`` or ``r2c/typeflow``, but those are beyond the scope of this tutorial.
+   ``r2c/transpiler`` or ``r2c/typed-ast``, which are beyond the scope of this tutorial.
 
 * ``Dockerfile`` is responsible for the container's setup and configuration. In this file you can
   install dependencies to build and run your analysis. To learn more about Dockerfiles in general,
@@ -93,10 +75,10 @@ Each of these files is used by the ``r2c`` system in a different way.
           deterministic and therefore benefit from pinning their base image to a specific
           version. For more information, see :doc:`/best-practices`.
 
-* ``src/analyze.sh`` is the main entry point. From this file, we'll run the programs that perform our
+* ``src/analyze.sh`` is the main entry point. From this file, we'll run your program that performs
   analysis!
 
-* ``src/unittest.sh`` lets us run our analyzer's unit tests, if it has them, inside the container by
+* ``src/unittest.sh`` run your analyzer's unit tests, if it has them, inside the container by
   caling them from this file.
 
 Once you've checked out those files, let's move on to :doc:`writing`.

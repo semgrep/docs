@@ -1,7 +1,11 @@
 Getting Started
 ===============
 
-This section is a brief tutorial for getting started with ``r2c``. For detailed documentation of the commands, options, and formats in this section, see the other sections of this documentation or the links throughout this tutorial.
+This section will walk you through using ``r2c-cli`` and the platform by writing an analyzer the computes the percentage of whitespace in the source code of 1000 npm packages. We’ll use it to find which projects have checked in `minified JavaScript files`_.
+
+For detailed documentation of commands, options, and formats, see :doc:`../api/index`.
+
+.. _minified JavaScript files: https://en.wikipedia.org/wiki/Minification_(programming)
 
 .. toctree::
 

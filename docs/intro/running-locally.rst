@@ -3,11 +3,8 @@
 Running Analysis Locally
 ========================
 
-.. highlight:: text
-
 Let's test our analyzer! First we'll need a target JavaScript project to test it on. Let's use the
-popular ``left-pad`` project. Let's make a folder to keep our test projects in and clone that
-project to the folder:
+popular `left-pad <https://github.com/stevemao/left-pad>`_ project. Make a folder to keep our test projects in and clone ``left-pad`` to the folder:
 
 .. code-block:: console
 
@@ -33,9 +30,9 @@ should look something like this:
     :linenos:
     :language: json
 
-
 Cool! Now we can hunt for minified files. All of these files look reasonable; though we don't know
 exactly what our threshold should be, minified files will probably be less than 5 to 10 percent
 whitespace. To find minified files in top projects and get a sense of what cut-off point to use,
-we'll want to run this analyzer at scale against npm packages - perhaps the top 1000 to start. To
-get started, head on over to :doc:`running-scale`.
+we'll want to run this analyzer at scale against npm packages. 
+
+To get started, head on over to :doc:`running-scale`.

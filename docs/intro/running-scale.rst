@@ -1,16 +1,31 @@
 Running on r2c
 ==============
 
+.. note:: The following sections require you to be a member of the r2c beta.
+
+Logging in to r2c
+-----------------
+
+To publish and download analyzers you'll need to log in to the r2c platform.
+
+.. code-block:: console
+
+  $ r2c login
+  Please enter your org name, or to use the common r2c platform, press enter [wildwest]:
+  Opening web browser to get login token. Do you want to continue? [Y/n]:
+  trying to open https://app.r2c.dev/settings/token in your browser...
+  Please enter the API token: ...
+
+Follow the on-screen instructions, accepting the default ``wildwest`` org name (which is tied to the beta).
+
 Pushing to r2c
 --------------
 
-Before we can run analysis at scale, we need to upload the analyzer to ``r2c``.
+Before uploading our analyzer, let's take a quick look at it to make sure everything is ready. **Once published, analyzer versions can't be
+unpublished**. For larger analyzers, this would also be the time to run unit and integration
+tests. 
 
-Uploading an analyzer is simple. In :doc:`creating`, we logged in to the r2c system, so we already
-have our credentials to push analyzers to r2c. Once published, though, analyzer versions can't be
-unpublished, so we should take a quick look at our analyzer to make sure everything is ready to
-go. For larger analyzers, this would be the time to also run all of our unit tests and integration
-test. For this tutorial analyzer, we'll just sanity-check the fields in ``analyzer.json``:
+For this tutorial analyzer, we'll just sanity-check the fields in ``analyzer.json``:
 
 .. literalinclude:: samples/minifinder/analyzer.json
     :linenos:
@@ -35,12 +50,12 @@ within the analyzer directory:
 
   $ r2c push
 
-That's it! Now let's head on over to :samp:`https://[YOUR-GROUP].massive.ret2.co/` to run your analyzer on 1000 npm projects and dive right into the results.
+That's it! Head on over to `app.r2c.dev <https://app.r2c.dev>`_ to run your analyzer on an npm input set and dive into the results.
 
 Starting the Job
 ----------------
 
-Once you've logged in with GitHub you'll be taken to your group's Jobs page, which will look similar to this:
+Once you've logged in to the platform you'll be taken to the Jobs page, which will look similar to this:
 
 .. image:: images/r2c.png
    :alt: The r2c Jobs page
@@ -51,15 +66,15 @@ pushed!
 .. image:: images/analyzer.png
    :alt: Selecting the analyzer to run
 
-Now we'll select a corpus to run our analyzer on: ``r2c npm 1000, 2019-04-01``.
+Now we'll select an input set to run our analyzer on: ``r2c npm 1000, 2019-04-01``.
 
 .. image:: images/npm1k.png
-   :alt: Choosing the corpus to run your analyzer on.
+   :alt: Choosing the input set to run your analyzer on.
 
 Click "Run Job" to start the analysis! Your job will be added to the jobs list, where you can click on it to see output, console logs, and errors coming in in real time!
 
 See :doc:`results` for next steps.
       
-.. note:: When a job is first kicked off, your infrastructure may need to "warm up"; idle machines will start processing your job and new machines will be brought online to handle the demand. Once warmed up a job should proceed quickly and you'll get results within just a few minutes for quick analyzers like minifinder.
+.. note:: When a job is first kicked off, the infrastructure may need to "warm up"; idle machines will start processing your job and new machines will be brought online to handle the demand. Once warmed up a job should proceed quickly and you'll get results within just a few minutes for quick analyzers like the tutorial.
 
 .. note:: We currently limit your container to running for 5 minutes with 1.5 GB of memory. Most analyzers don't hit this limit, however, if you believe you're running into them please let us know and we can adjust them for your research.
