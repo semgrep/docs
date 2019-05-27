@@ -5,7 +5,7 @@ r2c
 
 .. note:: This documentation is for our closed beta as of release |release|. Visit `app.r2c.dev <https://app.r2c.dev>`_ to join the waitlist!
 
-``r2c`` is a program analysis platform and cli for security researchers, hackers, and developers. Run your analysis on our infrastructure to quicky get results for millions of projects.
+`r2c <https://app.r2c.dev>`_ is a program analysis platform and cli for security researchers, hackers, and developers. Run your analysis on our infrastructure to quicky get results for millions of projects.
 
 The platform offers:
 
@@ -14,7 +14,7 @@ The platform offers:
 3. determinism: easily define source code targets from GitHub, npm, PyPi, and others
 4. collaboration & feedback: collaboratively triage, label, and disclose results
 
-Have questions about the beta, ``r2c``, or our `fellowships <https://jobs.lever.co/returntocorp/f1ced85d-2771-4142-907f-8cca8899369d>`_? We'd love to help! Contact us at `hello@r2c.dev <mailto:hello@r2c.dev>`_.
+Have questions about the beta, r2c, or our `fellowships <https://jobs.lever.co/returntocorp/f1ced85d-2771-4142-907f-8cca8899369d>`_? We'd love to help! Contact us at `hello@r2c.dev <mailto:hello@r2c.dev>`_.
 
 .. toctree::
    :maxdepth: 2

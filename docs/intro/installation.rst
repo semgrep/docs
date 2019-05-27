@@ -21,7 +21,7 @@ Please install the following required software:
 When installing ``docker``:
 
 - Do not use ``snap``, it is incompatible with ``r2c-cli``
-- For Ubuntu users we highly encourage `setting up Docker for regular users <https://docs.docker.com/install/linux/linux-postinstall/#manage-docker-as-a-non-root-user>`_. You need to run ``docker`` as the same user you'll run ``r2c-cli`` with, and we discourage running ``r2c-cli`` as a root or system administrator
+- For Ubuntu users we highly encourage `setting up Docker for non-root users <https://docs.docker.com/install/linux/linux-postinstall/#manage-docker-as-a-non-root-user>`_. You need to run ``docker`` as the same user you'll run ``r2c-cli`` with, and we discourage running ``r2c-cli`` as a root or system administrator
 
 Run the following to test ``docker``, ``python3``, and ``pip3`` installation:
 

@@ -49,14 +49,14 @@ The ``init`` command created several files in the directory you initialized:
       ├── analyze.sh
       └── unittest.sh
 
-Each of these files is used by the ``r2c`` system in a different way.
+Each of these files is used by the r2c system in a different way.
   
-* ``analyzer.json`` defines how your analyzer will interact with the ``r2c`` system and tools. Some
+* ``analyzer.json`` defines how your analyzer will interact with the r2c system and tools. Some
   important values in this file are:
 
  * ``analyzer_name``: The namespaced analyzer name. For the beta, all analyzers must be namespaced with ``beta`` to be uploaded to the platform.
 
- * ``version``: The version of the analyzer. *Versions should follow semantic versioning*. ``r2c``
+ * ``version``: The version of the analyzer. *Versions should follow semantic versioning*. r2c
    uses the analyzer name, version, and other parameters for caching: when running an analyzer at
    scale, all of these are used to determine if the analysis has already been run on that piece of
    code.

@@ -14,7 +14,7 @@ specifying dependencies, see :ref:`manifest`.
 
 All dependency names must also be valid Linux filesystem paths; this enables r2c to mount each
 dependency in a subfolder matching the org and analyzer name. For example, for the ``transpiler``
-analyzer published by ``r2c``, specified in the dependency object as ``"r2c/transpiler": "1.0.0"``,
+analyzer published by ``r2c-cli``, specified in the dependency object as ``"r2c/transpiler": "1.0.0"``,
 its output will appear under ``/analysis/inputs/r2c/transpiler``.
 
 This behavior is slightly different for filesystem type analyzers and JSON type analyzers. For
@@ -33,7 +33,7 @@ saved.
 Entry Point Behavior
 --------------------
 
-Analyzers may specify any entry point (default docker CMD) they wish. By default, the r2c init
+Analyzers may specify any entry point (default Docker CMD) they wish. By default, the r2c init
 template sets this to ``/analyzer/analyze.sh``. However, this command could instead be a ``java
 -jar`` command, a python program, or any other valid command. The only expectation r2c has of this
 command is that if it exits **with a non-zero return code**, the analysis is considered to have
@@ -51,4 +51,4 @@ To avoid this, the default r2c template takes arguments that create a user with 
 current user on the host machine. This happens once at build time, and does not affect the ability
 of the analyzer to run at scale on r2c infrastructure, but avoids files being created that require
 extra permission to clean up when running locally. If you need to, you may have analysis inside the
-docker container run as any user you like, though it is often not good practice to do so.
+Docker container run as any user you like, though it is often not good practice to do so.

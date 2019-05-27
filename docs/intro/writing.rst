@@ -10,10 +10,10 @@ Setting up the Container
 ------------------------
 
 We will write this analysis in the Python programming language. Though we are using Python for this
-tutorial, **you can write analysis in any programming language** as each Docker container can have
+tutorial, **you can write analysis in any programming language** as each ``docker`` container can have
 different software installed.
 
-Before we can write Python, we'll need to install it in our Docker container. To do this, add the
+Before we can write Python, we'll need to install it in our ``docker`` container. To do this, add the
 following line to the project's Dockerfile:
 
 .. literalinclude:: samples/minifinder/Dockerfile
@@ -52,7 +52,7 @@ directory. Change ``src/analyze.sh`` to look like this:
     :emphasize-lines: 6-8
 
 First, we change to the directory our source code is checked out. That folder is
-``/analysis/inputs/public/source-code/`` inside the Docker container. This location is a result of
+``/analysis/inputs/public/source-code/`` inside the ``docker`` container. This location is a result of
 minifinder depending on the ``source-code`` component (configured in ``analyzer.json``). For more
 information about dependencies and locating their output, see :doc:`/api/index`.
 

@@ -1,12 +1,12 @@
 Running on r2c
 ==============
 
-.. note:: The following sections require you to be a member of the ``r2c`` beta.
+.. note:: The following sections require you to be a member of the r2c beta.
 
 Logging in to r2c
 -----------------
 
-To publish and download analyzers you'll need to log in to the ``r2c`` platform.
+To publish and download analyzers you'll need to log in to the r2c platform.
 
 .. code-block:: console
 
