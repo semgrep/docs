@@ -1,23 +1,6 @@
 Creating an Analyzer
 =====================
 
-Logging in to r2c
------------------
-
-.. note:: This section requires you to be a member of the ``r2c`` beta. Please skip it if you're doing local only development and/or are not currently part of the beta.
-
-To download and publish analyzers you'll need to log in to the ``r2c`` platform.
-
-.. code-block:: console
-
-  $ r2c login
-  Please enter your org name, or to use the common r2c platform, press enter [wildwest]:
-  Opening web browser to get login token. Do you want to continue? [Y/n]:
-  trying to open https://app.r2c.dev/settings/token in your browser...
-  Please enter the API token: ...
-
-Follow the on-screen instructions, accepting the default ``wildwest`` org name (which is tied to the beta).
-
 Creating the Boilerplate
 ------------------------
 
