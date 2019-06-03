@@ -8,10 +8,10 @@ import matplotlib.pyplot as plt
 # EDIT THESE CONSTANTS
 ###################################
 
-GROUP = "YOUR-GROUP"
-DB_PASSWORD = "YOUR-DB-PASSWORD"
+DB_PASSWORD = "DB-PASSWORD-FROM-EMAIL"
 
-ANALYZER_NAME = f"{GROUP}/minifinder"
+# To distinguish your analyzer from others you can call this analyzer: beta/{yourname}-minifinder
+ANALYZER_NAME = f"beta/minifinder"
 ANALYZER_VERSION = "0.1.0"
 CORPUS_NAME = "r2c-1000"
 
@@ -21,11 +21,11 @@ CORPUS_NAME = "r2c-1000"
 
 # Canonical SQL query to get job-specific results back.
 JOB_QUERY = """
-SELECT * 
-FROM   result, 
-       commit_corpus 
-WHERE  result.commit_hash = commit_corpus.commit_hash 
-       AND analyzer_name = %(analyzer_name)s 
+SELECT *
+FROM   result,
+       commit_corpus
+WHERE  result.commit_hash = commit_corpus.commit_hash
+       AND analyzer_name = %(analyzer_name)s
        AND analyzer_version = %(analyzer_version)s
        AND corpus_name = %(corpus_name)s
 """
@@ -37,7 +37,7 @@ QUERY_PARAMS = {
 }
 
 # Connect to PostgreSQL host and query for job-specific results
-engine = create_engine(f'postgresql://notebook_user:{DB_PASSWORD}@{GROUP}-db.massive.ret2.co/postgres')
+engine = create_engine(f'postgresql://notebook_user:{DB_PASSWORD}@db.r2c.dev/postgres')
 job_df = pd.read_sql(JOB_QUERY, engine, params=QUERY_PARAMS)
 
 # Print pandas dataframe to stdout for debugging
