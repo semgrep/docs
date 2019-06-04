@@ -9,9 +9,9 @@ import matplotlib.pyplot as plt
 ###################################
 
 DB_PASSWORD = "DB-PASSWORD-FROM-EMAIL"
+AUTHOR-NAME = "YOUR-NAME"
 
-# To distinguish your analyzer from others you can call this analyzer: beta/{yourname}-minifinder
-ANALYZER_NAME = f"beta/minifinder"
+ANALYZER_NAME = f"beta/{AUTHOR-NAME}-minifinder"
 ANALYZER_VERSION = "0.1.0"
 CORPUS_NAME = "r2c-1000"
 
