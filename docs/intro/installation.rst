@@ -11,11 +11,11 @@ Requirements
 Please install the following required software:
 
 * `docker`_: a tool for running software in isolated containers
-* `python3`_: the programming language needed to run (but not to develop) analyzers
+* `python3.6+`_: the programming language needed to run (but not to develop) analyzers
 * `pip3`_: the Python package manager used to install and update ``r2c-cli``
 
 .. _docker: https://docs.docker.com/install/
-.. _python3: https://docs.python.org/3/using/index.html
+.. _python3.6+: https://docs.python.org/3/using/index.html
 .. _pip3: https://pip.pypa.io/en/stable/
 
 When installing ``docker``:
@@ -30,7 +30,7 @@ Run the following to test ``docker``, ``python3``, and ``pip3`` installation:
   $ docker run hello-world
   $ python3 --version
   $ pip3 --version
-   
+
 Getting ``r2c-cli``
 -------------------
 
@@ -46,7 +46,7 @@ To verify the ``r2c-cli`` installation, run:
 
   $ r2c --help
   Usage: r2c [OPTIONS] COMMAND [ARGS]...
-  
+
   Options:
     --debug                 Show extra output, error messages, and exception
                             stack traces
@@ -54,7 +54,7 @@ To verify the ``r2c-cli`` installation, run:
     --no-traverse-manifest  Don't attempt to find an analyzer.json if it doesn't
                             exist in the current or specified directory
     --help                  Show this message and exit.
-  
+
   Commands:
     build     Builds an analyzer without running it.
     init      Creates an example analyzer for analyzing JavaScript/TypeScript.
@@ -64,5 +64,5 @@ To verify the ``r2c-cli`` installation, run:
     run       Run the analyzer in the current directory over a code directory.
     test      Locally run integration tests for the current analyzer.
     unittest  Locally unit tests for the current analyzer directory.
-  
+
 If the help prompt prints, you're ready to move on to :doc:`creating`.
