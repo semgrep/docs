@@ -112,10 +112,8 @@ htmlhelp_basename = 'r2cdoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
-
+latex_engine = 'xelatex'
 latex_elements = {
-    'inputenc': '',
-    'utf8extra': '',
     # The paper size ('letterpaper' or 'a4paper').
     #
     # 'papersize': 'letterpaper',

@@ -1,7 +1,8 @@
 FROM blang/latex:ubuntu
 
-RUN apt-get update && apt-get install -y python3-sphinx
-RUN apt-get update && apt-get install -y texlive-latex-extra
+RUN apt-get update && apt-get install -y python3 python3-pip 
+RUN pip3 install -U sphinx
+
 COPY . /makeme
 
 RUN cd /makeme && ls -al && make html && make latexpdf
