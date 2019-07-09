@@ -39,9 +39,10 @@ release = version
 # ones.
 import os.path
 import sys
+
 sys.path.append(os.path.abspath("./_ext"))
 extensions = [
-    'sphinx.ext.githubpages',
+    # 'sphinx.ext.githubpages',
     'myemail'
 ]
 
@@ -111,7 +112,7 @@ htmlhelp_basename = 'r2cdoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
-
+latex_engine = 'xelatex'
 latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
     #
@@ -128,7 +129,9 @@ latex_elements = {
     # Latex figure (float) alignment
     #
     # 'figure_align': 'htbp',
+
 }
+
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
