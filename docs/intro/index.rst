@@ -15,3 +15,4 @@ For detailed documentation of commands, options, and formats, see :doc:`../api/i
    running-locally
    running-scale
    results
+   custom-inputs

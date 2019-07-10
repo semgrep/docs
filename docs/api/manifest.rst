@@ -32,7 +32,10 @@ following fields in the top-level JSON object:
    system.  Each key in this object is the name of another analyzer, such as
    ``r2c/transpiler``. Each value is the version of the analyzer you want to use. An analyzer's
    output for the same commit or repository appears under its name in ``/analysis/inputs`` when your
-   container runs, e.g. ``/analysis/inputs/r2c/transpiler``.
+   container runs, e.g. ``/analysis/inputs/r2c/transpiler``. 
+
+   Analyzers are expected to follow `semantic versioning <https://semver.org/>`. You can depend on a 
+   specific version, or on ``*`` to keep up to date with the latest.
 
 **type** : *"constant", "commit", or "git"*
    The type of input for which this analyzer produces a unique output.
