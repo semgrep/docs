@@ -1,6 +1,7 @@
 {
   "name": "pypi-10-github-head",
   "version": "0.0.1",
+  "description": "github source commits for the top packages on PyPi as of 2019-07-01",
   "inputs": [
     {
       "repo_url": "https://github.com/requests/requests",

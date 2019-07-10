@@ -7,6 +7,18 @@ that you specified.
 
 The command ``r2c upload-inputset <filename>`` can be use upload a file in the following format:
 
+    .. code-block:: json
+    
+        {
+            "name": "STRING",
+            "version": "SEMVER_STRING",
+            "description": "OPTIONAL_STRING",
+            "readme": "OPTIONAL_MARKDOWN_README",
+            "inputs": [INPUT, ...],
+        }
+
+``INPUT`` is an interface with multiple types; as an example:
+
 .. literalinclude:: samples/custom-inputset.json
     :linenos:
     :language: json
