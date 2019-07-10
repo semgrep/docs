@@ -1,3 +1,4 @@
+..  _analyzer_json_manifest_spec:
 ``analyzer.json``
 =================
 

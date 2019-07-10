@@ -2,6 +2,7 @@ Depending on Other Analyzers
 ============================
 
 So you've looked around and identified an analyzer you'd like to depend on: great!
+
 The next step is to add it as a dependency of your analyzer.
 
 Declaring the Dependency
@@ -16,7 +17,7 @@ We'll initialize an analyzer with ``r2c init`` and call it *typed-ast-rules-exam
     :language: json
 
 Analyzers are expected to follow `semantic versioning <https://semver.org/>`_.
-You can depend on a specific version, or on the latest with ``*``. For more details, see see :ref:`api/manifest`.
+You can depend on a specific version, or on the latest with ``*``. For more details, see see :ref:`the manifest spec <analyzer_json_manifest_spec>`.
 
 
 Using the Dependency
