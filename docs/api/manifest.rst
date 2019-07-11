@@ -37,7 +37,9 @@ following fields in the top-level JSON object:
    container runs, e.g. ``/analysis/inputs/r2c/transpiler``. 
 
    Analyzers are expected to follow `semantic versioning <https://semver.org/>`. You can depend on a 
-   specific version, or on ``*`` to keep up to date with the latest.
+   specific version, or on ``*`` to keep up to date with the latest. To keep your analyzer deterministic, we 
+   highly recommend depending on a specific version. Semver caret and tilde ranges like ``~1.1.0`` or ``^1.1.0``
+   are allowed, but discouraged.
 
 **type** : *"constant", "commit", or "git"*
    The type of input for which this analyzer produces a unique output.

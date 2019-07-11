@@ -17,7 +17,8 @@ We'll initialize an analyzer with ``r2c init`` and call it *typed-ast-rules-exam
     :language: json
 
 Analyzers are expected to follow `semantic versioning <https://semver.org/>`_.
-You can depend on a specific version, or on the latest with ``*``. For more details, see see :ref:`the manifest spec <analyzer_json_manifest_spec>`.
+We highly recommend depending on a specific version to ensure your analyzer is deterministic.
+Wildcard (``*``) and other major/minor version specifier are allowed, but discouraged: for more details, see see :ref:`the manifest spec <analyzer_json_manifest_spec>`.
 
 
 Using the Dependency
@@ -31,9 +32,9 @@ will be mounted into your container automatically.
 As a reminder, dependencies for analyzers are mounted into the container at ``/analysis/inputs``.
 
 All dependency names must also be valid Linux filesystem paths; this enables r2c to mount each
-dependency in a subfolder matching the org and analyzer name. For example, for the ``transpiler``
-analyzer published by ``r2c-cli``, specified in the dependency object as ``"r2c/transpiler": "1.0.0"``,
-its output will appear under ``/analysis/inputs/r2c/transpiler``.
+dependency in a subfolder matching the org and analyzer name. For example, if a transpiler analyzer
+were published by you or someone else using r2c-cli, you could depend on it by specifying it in 
+the dependency object as ``"r2c/transpiler": "1.0.0"``. Its output will appear under ``/analysis/inputs/r2c/transpiler``.
 
 This behavior is slightly different for filesystem type analyzers and JSON type analyzers. For
 filesystem type analyzers, their input appears at that path. If ``r2c/transpiler`` is of type

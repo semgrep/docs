@@ -8,6 +8,6 @@ r2c --debug test
 #cd ${DIR}/intro/samples/minifinder2
 #r2c --debug test 
 cd ${DIR}/pipelines/samples/typed-ast-rules-example
-r2c --debug test 
+r2c --verbose test 
 
 echo 'all tests have succeeded!'
