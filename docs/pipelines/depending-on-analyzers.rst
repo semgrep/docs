@@ -1,7 +1,8 @@
 Depending on Other Analyzers
 ============================
 
-So you've looked aroun and identified an analyzer you'd like to depend on: great!
+So you've looked around and identified an analyzer you'd like to depend on: great!
+
 The next step is to add it as a dependency of your analyzer.
 
 Declaring the Dependency
@@ -9,23 +10,23 @@ Declaring the Dependency
 
 In this example, we'll write an analyzer that uses a type-annotated AST produced by ``r2c/typed-ast`` and build some rules that use the type annotations.
 
-The first step is to edit the ``analyzer.json`` to include ``r2c/typed-ast`` as a dependency:
+We'll initialize an analyzer with ``r2c init`` and call it *typed-ast-rules-example*. Then we edit the ``analyzer.json`` to include ``r2c/typed-ast`` as a dependency:
 
 .. literalinclude:: samples/typed-ast-rules-example/analyzer.json
     :linenos:
     :language: json
 
-Analyzers are expected to follow `semantic versioning <https://semver.org/>`.
-You can depend on a specific version of on ``*`` in the ``analyzer.json``. For more details, see see :ref:`manifest`.
+Analyzers are expected to follow `semantic versioning <https://semver.org/>`_.
+You can depend on a specific version, or on the latest with ``*``. For more details, see see :ref:`the manifest spec <analyzer_json_manifest_spec>`.
 
 
 Using the Dependency
 --------------------
 
-What happens now?
+We've declared the dependency--how do we actually use it?
 
 The output of the previous analyzer stage (or stages--you can have multiple dependencies in your analyzer)
- will be mounted into your container automatically.
+will be mounted into your container automatically. 
 
 As a reminder, dependencies for analyzers are mounted into the container at ``/analysis/inputs``.
 
@@ -42,8 +43,11 @@ the other hand, ``r2c/transpiler`` is of type JSON and writes its output to
 ``/analysis/output/output.json``, that JSON file would exist at
 ``/analysis/inputs/r2c/transpiler.json``.
 
-In our case, ``r2c/typed-ast`` is a filesystem analyzer, so we can look for its input at ``/analysis/inputs/r2c/typed-ast``.
+In our case, ``r2c/typed-ast`` is a filesystem analyzer, so we can look for its input at ``/analysis/inputs/r2c/typed-ast``. 
+Our ``analyze.sh`` entrypoint specifies this and passes it to a program that will iterate over all of the input ASTs and perform matching on them:
 
-.. literalinclude:: samples/typed-ast-rules-example/analyzer.json
+.. literalinclude:: samples/typed-ast-rules-example/src/analyze.sh
     :linenos:
-    :language: json
+    :language: bash
+
+If you're interested in using *typed-ast-rules-example* specifically, you can continue cloning https://github.com/returntocorp/typed-ast-rules-example

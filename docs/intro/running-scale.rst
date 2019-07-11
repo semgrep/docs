@@ -35,7 +35,7 @@ Everything looks mostly good. However, to follow best practices, our analyzer sh
 Versioning`_. As this is our first release, but we're not yet sure if everything is production
 ready, we should designate this release version ``0.1.0``:
 
-.. code-block:: json
+.. code-block:: text
 
   "version": "0.1.0",
 

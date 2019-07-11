@@ -10,7 +10,7 @@ Filesystem Structure
 --------------------
 
 Dependencies for analyzers are mounted into the container at ``/analysis/inputs``. For more on
-specifying dependencies, see :ref:`manifest`.
+specifying dependencies, see :ref:`the manifest spec <analyzer_json_manifest_spec>`.
 
 All dependency names must also be valid Linux filesystem paths; this enables r2c to mount each
 dependency in a subfolder matching the org and analyzer name. For example, for the ``transpiler``

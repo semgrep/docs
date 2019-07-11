@@ -1,3 +1,5 @@
+..  _analyzer_json_manifest_spec:
+
 ``analyzer.json``
 =================
 
@@ -67,3 +69,4 @@ following fields in the top-level JSON object:
    The current version of the r2c platform does not support non-deterministic analyzers. However,
    this feature is a part of the analyzer specifciation version ``1.0.0`` and will be implemneted
    soon.
+

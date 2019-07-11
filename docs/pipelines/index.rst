@@ -1,5 +1,5 @@
 Building Pipelines
-===============
+==================
 
 .. note:: Pipeline support is under active development: some of the specific commands in this section may be changing soon!
 
