@@ -33,7 +33,7 @@ following fields in the top-level JSON object:
    This is the main mechanism by which analyzers interact with other analysis components in the r2c
    system.  Each key in this object is the name of another analyzer, such as
    ``r2c/transpiler``. Each value is the version of the analyzer you want to use. An analyzer's
-   output for the same commit or repository appears under its name in ``/analysis/inputs`` when your
+   output for the same input (commit or repository) appears under its name in ``/analysis/inputs`` when your
    container runs, e.g. ``/analysis/inputs/r2c/transpiler``. 
 
    Analyzers are expected to follow `semantic versioning <https://semver.org/>`. You can depend on a 

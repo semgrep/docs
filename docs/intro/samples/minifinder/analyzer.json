@@ -3,7 +3,7 @@
   "author_name": "Jav. A. Script",
   "author_email": "hello@example.com",
   "version": "0.0.1",
-  "spec_version": "1.2.0",
+  "spec_version": "2.1.0",
   "dependencies": {
     "public/source-code": "*"
   },
