@@ -2,8 +2,10 @@ Troubleshooting
 ===============
 
 The ``/analysis`` directory is completely empty
----------------
-If the ``/analysis`` directory doesn't even have ``inputs`` and ``output`` subdirectories, then Docker is probably having issues mounting those folders. To verify, run
+-----------------------------------------------
+
+If the ``/analysis`` directory doesn't even have ``inputs`` and ``output`` 
+subdirectories, then Docker is probably having issues mounting those folders. To verify, run
 
 .. code-block:: console
 

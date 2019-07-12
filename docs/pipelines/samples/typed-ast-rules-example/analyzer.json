@@ -1,11 +1,11 @@
 {
-  "analyzer_name": "beta/minifinder",
+  "analyzer_name": "r2c/typed-ast-rules-example",
   "author_name": "Jav. A. Script",
   "author_email": "hello@example.com",
-  "version": "0.0.1",
-  "spec_version": "2.1.0",
+  "version": "1.0.0",
+  "spec_version": "1.2.0",
   "dependencies": {
-    "public/source-code": "*"
+    "r2c/typed-ast": "1.1.0"
   },
   "type": "commit",
   "output": {

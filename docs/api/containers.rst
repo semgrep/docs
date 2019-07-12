@@ -10,7 +10,7 @@ Filesystem Structure
 --------------------
 
 Dependencies for analyzers are mounted into the container at ``/analysis/inputs``. For more on
-specifying dependencies, see :ref:`manifest`.
+specifying dependencies, see :ref:`the manifest spec <analyzer_json_manifest_spec>`.
 
 All dependency names must also be valid Linux filesystem paths; this enables r2c to mount each
 dependency in a subfolder matching the org and analyzer name. For example, for the ``transpiler``
@@ -19,7 +19,7 @@ its output will appear under ``/analysis/inputs/r2c/transpiler``.
 
 This behavior is slightly different for filesystem type analyzers and JSON type analyzers. For
 filesystem type analyzers, their input appears at that path. If ``r2c/transpiler`` is of type
-filesystem and writes a file named ``foo.bin`` to ``/analysis/output/output/``, then when depending
+filesystem and writes a file named ``foo.bin`` to ``/analysis/output/fs``, then when depending
 on ``r2c/tranpsiler``, that file would exist at ``/analysis/inputs/r2c/transpiler/foo.bin``. If on
 the other hand, ``r2c/transpiler`` is of type JSON and writes its output to
 ``/analysis/output/output.json``, that JSON file would exist at

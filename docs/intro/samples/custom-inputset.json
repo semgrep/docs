@@ -1,0 +1,52 @@
+{
+  "name": "pypi-10-github-head",
+  "version": "0.0.1",
+  "description": "github source commits for the top packages on PyPi as of 2019-07-01",
+  "inputs": [
+    {
+      "repo_url": "https://github.com/requests/requests",
+      "commit_hash": "4983a9bde39c6320aa4f3e34e50dac6e263dab6f",
+      "input_type": "GitRepoCommit"
+    },
+    {
+      "repo_url": "https://github.com/urllib3/urllib3",
+      "commit_hash": "25add2a0bac43823a4a5ef9217578a2cf5bcfc69",
+      "input_type": "GitRepoCommit"
+    },
+    {
+      "repo_url": "https://github.com/pypa/pip",
+      "commit_hash": "26cdedd618c080ba207c55bf81d61119e1c36232",
+      "input_type": "GitRepoCommit"
+    },
+    {
+      "repo_url": "https://github.com/yaml/pyyaml",
+      "commit_hash": "5986257f9fc978d4a61b6e0001df554f80e565cb",
+      "input_type": "GitRepoCommit"
+    },
+    {
+      "repo_url": "https://github.com/etingof/pyasn1",
+      "commit_hash": "b028644dea4244f1cd2513ab0241c8cb9be43324",
+      "input_type": "GitRepoCommit"
+    },
+    {
+      "repo_url": "https://github.com/benjaminp/six",
+      "commit_hash": "aa4e90bcd7b7bc13a71dfaebcb2021f4caaa8432",
+      "input_type": "GitRepoCommit"
+    },
+    {
+      "repo_url": "https://github.com/boto/s3transfer",
+      "commit_hash": "878b37859cc8a3e8ffbfaa36b37c06dea1f7f01d",
+      "input_type": "GitRepoCommit"
+    },
+    {
+      "repo_url": "https://github.com/boto/botocore",
+      "commit_hash": "6bb18340f99642219996fb9d88c8703748ce8049",
+      "input_type": "GitRepoCommit"
+    },
+    {
+      "repo_url": "https://github.com/dateutil/dateutil",
+      "commit_hash": "40924bd0392308914b01815f56d311c8478217b8",
+      "input_type": "GitRepoCommit"
+    }
+  ]
+}

@@ -22,6 +22,7 @@ Have questions about the beta, r2c, or our `fellowships <https://jobs.lever.co/r
    :caption: Contents:
       
    intro/index
+   pipelines/index
    api/index
    best-practices
    troubleshooting

@@ -1,3 +1,5 @@
+..  _analyzer_json_manifest_spec:
+
 ``analyzer.json``
 =================
 
@@ -31,8 +33,13 @@ following fields in the top-level JSON object:
    This is the main mechanism by which analyzers interact with other analysis components in the r2c
    system.  Each key in this object is the name of another analyzer, such as
    ``r2c/transpiler``. Each value is the version of the analyzer you want to use. An analyzer's
-   output for the same commit or repository appears under its name in ``/analysis/inputs`` when your
-   container runs, e.g. ``/analysis/inputs/r2c/transpiler``.
+   output for the same input (commit or repository) appears under its name in ``/analysis/inputs`` when your
+   container runs, e.g. ``/analysis/inputs/r2c/transpiler``. 
+
+   Analyzers are expected to follow `semantic versioning <https://semver.org/>`. You can depend on a 
+   specific version, or on ``*`` to keep up to date with the latest. To keep your analyzer deterministic, we 
+   highly recommend depending on a specific version. Semver caret and tilde ranges like ``~1.1.0`` or ``^1.1.0``
+   are allowed, but discouraged.
 
 **type** : *"constant", "commit", or "git"*
    The type of input for which this analyzer produces a unique output.
@@ -64,3 +71,4 @@ following fields in the top-level JSON object:
    The current version of the r2c platform does not support non-deterministic analyzers. However,
    this feature is a part of the analyzer specifciation version ``1.0.0`` and will be implemneted
    soon.
+
