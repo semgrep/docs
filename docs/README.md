@@ -1,5 +1,6 @@
 ## building documentation
 
+    git submodule update --init
     make clean && make html
 
 ## building documentation as a PDF
