@@ -6,7 +6,7 @@ We'll start our journey with ``r2c-cli``, which is used to develop and test anal
 Requirements
 ------------
 
-.. note:: We support Mac OSX and Ubuntu for local analyzer development.
+.. note:: We support Mac OS X and Ubuntu for local analyzer development.
 
 Please install the following required software:
 
