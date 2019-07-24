@@ -11,11 +11,11 @@ Requirements
 Please install the following required software:
 
 * `Docker Engine - Community`_: a tool for running software in isolated containers
-* `python3.6+`_: the programming language needed to run (but not to develop) analyzers
+* `Python 3.6+`_: the programming language needed to run (but not to develop) analyzers
 * `pip3`_: the Python package manager used to install and update ``r2c-cli``
 
 .. _Docker Engine - Community: https://docs.docker.com/install/#supported-platforms
-.. _python3.6+: https://docs.python.org/3/using/index.html
+.. _Python 3.6+: https://docs.python.org/3/using/index.html
 .. _pip3: https://pip.pypa.io/en/stable/
 
 When installing ``docker``:
