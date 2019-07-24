@@ -1,4 +1,5 @@
 ## building documentation
+[install Sphinx using pip3](https://www.sphinx-doc.org/en/master/usage/installation.html#installation-from-pypi)
 
     git submodule update --init
     make clean && make html
