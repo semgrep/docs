@@ -12,7 +12,7 @@ Please install the following required software:
 
 * `Docker Engine - Community`_: a tool for running software in isolated containers
 * `Python 3.6+`_: the programming language needed to run (but not to develop) analyzers
-* `pip3`_: the Python package manager used to install and update ``r2c-cli``
+* `pip3`_: the Python package manager used to install and update ``r2c-cli`` (note pip3 will be installed by the Python 3.6+ installer)
 
 .. _Docker Engine - Community: https://docs.docker.com/install/#supported-platforms
 .. _Python 3.6+: https://docs.python.org/3/using/index.html
