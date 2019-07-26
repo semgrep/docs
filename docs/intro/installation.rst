@@ -6,16 +6,16 @@ We'll start our journey with ``r2c-cli``, which is used to develop and test anal
 Requirements
 ------------
 
-.. note:: We support Mac OSX and Ubuntu for local analyzer development.
+.. note:: We support Mac OS X and Ubuntu for local analyzer development.
 
 Please install the following required software:
 
-* `docker`_: a tool for running software in isolated containers
-* `python3.6+`_: the programming language needed to run (but not to develop) analyzers
-* `pip3`_: the Python package manager used to install and update ``r2c-cli``
+* `Docker Engine - Community`_: a tool for running software in isolated containers
+* `Python 3.6+`_: the programming language needed to run (but not to develop) analyzers
+* `pip3`_: the Python package manager used to install and update ``r2c-cli`` (note pip3 will be installed by the Python 3.6+ installer)
 
-.. _docker: https://docs.docker.com/install/
-.. _python3.6+: https://docs.python.org/3/using/index.html
+.. _Docker Engine - Community: https://docs.docker.com/install/#supported-platforms
+.. _Python 3.6+: https://docs.python.org/3/using/index.html
 .. _pip3: https://pip.pypa.io/en/stable/
 
 When installing ``docker``:
