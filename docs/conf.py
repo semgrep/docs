@@ -92,7 +92,7 @@ html_theme_options = {
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-#html_static_path = ['_static']
+html_static_path = ['_static']
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
@@ -186,3 +186,10 @@ epub_exclude_files = ['search.html']
 html_favicon = 'favicon.ico'
 # To clear the version suffix
 # html_title = ''
+
+# -- Additonal customizations -------------------------------------------------
+
+def setup(app):
+    # add file for Google Analytics
+    app.add_javascript("https://www.googletagmanager.com/gtag/js?id=UA-106134149-9")
+    app.add_javascript("ga.js")
