@@ -87,6 +87,8 @@ html_theme = 'alabaster'
 #
 html_theme_options = {
     'description': 'Distributed program analysis for the open-source community',
+    'fixed_sidebar' :'true',
+    'show_relbars': 'true',
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
