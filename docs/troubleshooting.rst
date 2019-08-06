@@ -33,3 +33,27 @@ If you see two lines of output like
 then the issue is something else. In that case, please contact us at `support@r2c.dev`_ and we'll be happy to assist.
 
 .. _support@r2c.dev: support@r2c.dev
+
+
+The ``r2c`` command is not found
+--------------------------------
+
+If you try to run ``r2c --help`` from the command line and receive a ``command not found`` error, then it’s possible you need to add something to your ``$PATH``.
+
+First, get the appropriate location to be added from pip3 by running
+
+.. code-block:: console
+
+   $ pip3 show r2c-cli
+
+Notice the output reports a field labeled ``Location``. For example, this might be something like:
+``/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages``.
+
+From the ``Location`` you can derive the appropriate ``bin`` directory that needs to be added to the ``$PATH``. In this example, that would be:
+``/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/bin``.
+
+In your shell of choice, add that directory to your path through an entry in your ``.bashrc``, ``.zshrc``, or similar (depending on your shell), for example:
+
+.. code-block:: console
+
+   export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/3.7"
