@@ -10,8 +10,7 @@ In a directory where you want to create your new analyzer, run:
 
   $ r2c init
 
-For the ``Analyzer name`` prompt, enter ``<YOUR-USERNAME>-minifinder``. For the rest of the prompts we'll use
-the defaults.
+For the ``Analyzer name`` prompt, enter ``<YOUR-USERNAME>-minifinder``. A new subdirectory with that name will be created. For the rest of the prompts we'll use the defaults.
 
 .. code-block:: console
 
