@@ -56,4 +56,4 @@ In your shell of choice, add that directory to your path through an entry in you
 
 .. code-block:: console
 
-   export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/3.7"
+   export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/3.7/bin"
