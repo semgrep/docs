@@ -1,0 +1,8 @@
+analyzer:
+  name: r2c/parameterized
+  parameters: {something: [{key1: foo, key2: bar}, value2]}
+  version: 1.0.0
+
+input_set:
+  name: some-input-set
+  version: 1.0.0
