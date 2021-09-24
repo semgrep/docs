@@ -14,5 +14,6 @@ For detailed documentation of commands, options, and formats, see :doc:`../api/i
    writing
    running-locally
    running-scale
+   parameters
    results
    custom-inputs

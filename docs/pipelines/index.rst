@@ -10,3 +10,4 @@ For detailed documentation of commands, options, and formats, see :doc:`../api/i
 .. toctree::
 
    depending-on-analyzers
+   jobdef-files

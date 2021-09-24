@@ -1,0 +1,7 @@
+analyzer:
+  name: r2c/my-awesome-analyzer
+  version: 1.0.0
+
+input_set:
+  name: my-input-set
+  version: 1.2.0
